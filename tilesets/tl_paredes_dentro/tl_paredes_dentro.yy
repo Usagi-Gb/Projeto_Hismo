@@ -1,0 +1,41 @@
+{
+  "$GMTileSet":"v1",
+  "%Name":"tl_paredes_dentro",
+  "autoTileSets":[],
+  "macroPageTiles":{
+    "SerialiseHeight":18,
+    "SerialiseWidth":9,
+    "TileCompressedData":[
+      -130,0,5,45,32,0,23,45,-5,0,3,20,0,35,-5,0,1,12,-8,0,5,25,38,38,0,0,
+    ],
+    "TileDataFormat":1,
+  },
+  "name":"tl_paredes_dentro",
+  "out_columns":7,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
+  "parent":{
+    "name":"Tile Sets",
+    "path":"folders/Tile Sets.yy",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"spr_tile_paredes",
+    "path":"sprites/spr_tile_paredes/spr_tile_paredes.yy",
+  },
+  "spriteNoExport":false,
+  "textureGroupId":{
+    "name":"Default",
+    "path":"texturegroups/Default",
+  },
+  "tileAnimationFrames":[],
+  "tileAnimationSpeed":15.0,
+  "tileHeight":16,
+  "tilehsep":0,
+  "tilevsep":0,
+  "tileWidth":16,
+  "tilexoff":0,
+  "tileyoff":0,
+  "tile_count":48,
+}

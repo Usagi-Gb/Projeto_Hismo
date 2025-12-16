@@ -1,0 +1,46 @@
+{
+  "$GMTileSet":"v1",
+  "%Name":"tl_level",
+  "autoTileSets":[],
+  "macroPageTiles":{
+    "SerialiseHeight":12,
+    "SerialiseWidth":11,
+    "TileCompressedData":[
+      -85,0,3,5,0,5,-3,0,8,56,0,57,0,0,15,0,35,-3,0,8,66,0,67,0,0,25,0,45,-3,0,3,76,0,77,-10,0,1,87,-5,0,
+    ],
+    "TileDataFormat":1,
+  },
+  "name":"tl_level",
+  "out_columns":13,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
+  "parent":{
+    "name":"Tile Sets",
+    "path":"folders/Tile Sets.yy",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"spr_tile",
+    "path":"sprites/spr_tile/spr_tile.yy",
+  },
+  "spriteNoExport":true,
+  "textureGroupId":{
+    "name":"Default",
+    "path":"texturegroups/Default",
+  },
+  "tileAnimationFrames":[
+    {"$GMTileAnimation":"","%Name":"boca_lava","frames":[15,16,17,17,],"name":"boca_lava","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
+    {"$GMTileAnimation":"","%Name":"base_lava","frames":[25,26,27,27,],"name":"base_lava","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
+    {"$GMTileAnimation":"","%Name":"boca_agua","frames":[35,36,37,37,],"name":"boca_agua","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
+    {"$GMTileAnimation":"","%Name":"base_agua","frames":[45,46,47,47,],"name":"base_agua","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
+  ],
+  "tileAnimationSpeed":4.0,
+  "tileHeight":16,
+  "tilehsep":0,
+  "tilevsep":0,
+  "tileWidth":16,
+  "tilexoff":0,
+  "tileyoff":0,
+  "tile_count":170,
+}
