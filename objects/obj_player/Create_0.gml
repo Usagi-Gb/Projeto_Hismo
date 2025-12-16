@@ -3,18 +3,29 @@ velv = 0;
 max_vel = 3;
 vel = 0;
 move_dir = 0;
+
 arma = noone;
+
 dano = false;
 vida_max = 3;
 vida = vida_max;
 tempo_inv = room_speed * 2;
-//ajuda
+
+olha_mouse = function(){
+	if(mouse_x >= x){
+		xscale = 1;
+	}
+	else{
+		xscale = -1;
+	}
+}
+
 efeito_dano = function(){
 	static _valor = -0.05;
 	
 	if(!dano) return;
 	if(image_alpha <= 0) _valor *= -1;
-	if(image_alpha > 0) _valor *= -1;
+	if(image_alpha > 1) _valor *= -1;
 	image_alpha += _valor;
 }
 
