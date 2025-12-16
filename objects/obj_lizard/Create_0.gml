@@ -1,3 +1,7 @@
+event_inherited();
+vida_max = 3;
+vida_atual = vida_max;
+
 estado = noone;
 tempo_estado = room_speed * 10;
 timer_estado = 0;

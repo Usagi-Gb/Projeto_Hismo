@@ -12,12 +12,7 @@ vida = vida_max;
 tempo_inv = room_speed * 2;
 
 olha_mouse = function(){
-	if(mouse_x >= x){
-		xscale = 1;
-	}
-	else{
-		xscale = -1;
-	}
+	xscale = mouse_x - x != 0 ? sign(mouse_x - x) : 1;
 }
 
 efeito_dano = function(){
