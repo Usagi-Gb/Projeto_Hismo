@@ -1,10 +1,10 @@
 {
   "FolderOrderSettings":[
-    {"name":"Shaders","order":11,"path":"folders/Shaders.yy",},
     {"name":"Objects","order":8,"path":"folders/Objects.yy",},
     {"name":"Armas","order":3,"path":"folders/Objects/Armas.yy",},
     {"name":"Inimigos","order":4,"path":"folders/Objects/Inimigos.yy",},
     {"name":"Salas","order":6,"path":"folders/Salas.yy",},
+    {"name":"Shaders","order":11,"path":"folders/Shaders.yy",},
     {"name":"Sprites","order":7,"path":"folders/Sprites.yy",},
     {"name":"Armas","order":3,"path":"folders/Sprites/Armas.yy",},
     {"name":"Inimigos","order":4,"path":"folders/Sprites/Inimigos.yy",},

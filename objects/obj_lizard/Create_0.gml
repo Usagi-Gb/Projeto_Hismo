@@ -16,7 +16,7 @@ destino_y = y;
 velh = 0;
 velv = 0;
 vel = 1;
-
+//test
 tempo_morte = room_speed;
 
 alvo = noone;
