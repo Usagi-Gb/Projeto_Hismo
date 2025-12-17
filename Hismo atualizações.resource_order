@@ -1,5 +1,6 @@
 {
   "FolderOrderSettings":[
+    {"name":"Shaders","order":11,"path":"folders/Shaders.yy",},
     {"name":"Objects","order":8,"path":"folders/Objects.yy",},
     {"name":"Armas","order":3,"path":"folders/Objects/Armas.yy",},
     {"name":"Inimigos","order":4,"path":"folders/Objects/Inimigos.yy",},
