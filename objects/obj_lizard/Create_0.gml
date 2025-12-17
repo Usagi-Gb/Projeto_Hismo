@@ -17,6 +17,7 @@ velh = 0;
 velv = 0;
 vel = 1;
 //test
+//test2
 tempo_morte = room_speed;
 
 alvo = noone;
