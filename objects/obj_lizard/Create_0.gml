@@ -8,7 +8,7 @@ timer_estado = 0;
 
 tempo_dano = room_speed / 4;
 timer_dano = tempo_dano;
-
+//ssss
 sat = 0;
 
 destino_x = x;
