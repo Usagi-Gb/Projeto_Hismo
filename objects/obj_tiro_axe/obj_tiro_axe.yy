@@ -1,18 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"obj_tiro",
+  "%Name":"obj_tiro_axe",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_block","path":"objects/obj_block/obj_block.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_tiro",
+  "name":"obj_tiro_axe",
   "overriddenProperties":[],
   "parent":{
     "name":"Projeteis",
     "path":"folders/Objects/Projeteis.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_tiro",
+    "path":"objects/obj_tiro/obj_tiro.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_tiro",
-    "path":"sprites/spr_tiro/spr_tiro.yy",
+    "name":"spr_tiro_axe",
+    "path":"sprites/spr_tiro_axe/spr_tiro_axe.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -1,4 +1,4 @@
-event_inherited();
+ event_inherited();
 vida_max = 3;
 vida_atual = vida_max;
 //test45
@@ -8,7 +8,7 @@ timer_estado = 0;
 
 tempo_dano = room_speed / 4;
 timer_dano = tempo_dano;
-//ssss
+//ssss	
 sat = 0;
 
 destino_x = x;
@@ -123,8 +123,8 @@ estado_persegue = function(){
 }
 estado_prepara_ataque = function(){
 	
-	if(sat < 1){
-		sat += (delta_time / 2000000);
+	if(sat <= 1){
+		sat += (delta_time / 2000000); 
 	}
 	image_speed = sat;
 	

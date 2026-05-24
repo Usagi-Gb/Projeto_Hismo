@@ -1,2 +1,2 @@
-dano = false;
+ dano = false;
 image_alpha = 1;
