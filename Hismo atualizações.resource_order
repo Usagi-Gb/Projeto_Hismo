@@ -2,8 +2,8 @@
   "FolderOrderSettings":[
     {"name":"Objects","order":4,"path":"folders/Objects.yy",},
     {"name":"Armas","order":3,"path":"folders/Objects/Armas.yy",},
-    {"name":"Projeteis","order":5,"path":"folders/Objects/Projeteis.yy",},
     {"name":"Inimigos","order":4,"path":"folders/Objects/Inimigos.yy",},
+    {"name":"Projeteis","order":5,"path":"folders/Objects/Projeteis.yy",},
     {"name":"Salas","order":2,"path":"folders/Salas.yy",},
     {"name":"Shaders","order":6,"path":"folders/Shaders.yy",},
     {"name":"Sprites","order":3,"path":"folders/Sprites.yy",},
@@ -22,6 +22,7 @@
     {"name":"obj_cajado_verde","order":2,"path":"objects/obj_cajado_verde/obj_cajado_verde.yy",},
     {"name":"obj_cajado_vermelho","order":1,"path":"objects/obj_cajado_vermelho/obj_cajado_vermelho.yy",},
     {"name":"obj_inimigo_pai","order":1,"path":"objects/obj_inimigo_pai/obj_inimigo_pai.yy",},
+    {"name":"obj_pause","order":6,"path":"objects/obj_pause/obj_pause.yy",},
     {"name":"obj_tiro","order":1,"path":"objects/obj_tiro/obj_tiro.yy",},
     {"name":"roomconfig","order":1,"path":"rooms/roomconfig/roomconfig.yy",},
     {"name":"roomjogo","order":2,"path":"rooms/roomjogo/roomjogo.yy",},
