@@ -33,7 +33,7 @@
     {"$GMObjectProperty":"v2","%Name":"tiro","filters":[
         "GMObject",
       ],"listItems":[],"multiselect":false,"name":"tiro","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"obj_tiro","path":"objects/obj_tiro/obj_tiro.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"obj_tiro","varType":5,},
-    {"$GMObjectProperty":"v2","%Name":"knokback","filters":[],"listItems":[],"multiselect":false,"name":"knokback","rangeEnabled":true,"rangeMax":20.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"4.3","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"knokback","filters":[],"listItems":[],"multiselect":false,"name":"knokback","rangeEnabled":true,"rangeMax":20.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"imprecisao","filters":[],"listItems":[],"multiselect":false,"name":"imprecisao","rangeEnabled":true,"rangeMax":50.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"2","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"qtd","filters":[],"listItems":[],"multiselect":false,"name":"qtd","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":1,},
   ],

@@ -5,7 +5,7 @@ event_inherited();
 	if(atirar){
 		
 		if(delay_tiro <= 0){
-			delay_tiro = espera_tiro * room_speed;
+			delay_tiro = espera_tiro * game_get_speed(gamespeed_fps);
 			for(var i = 0; i < qtd; i++)
 			{
 				var _val = 90/(qtd - 1);

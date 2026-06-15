@@ -3,10 +3,10 @@ vida_max = 3;
 vida_atual = vida_max;
 //test45
 estado = noone;
-tempo_estado = room_speed * 10;
+tempo_estado = game_get_speed(gamespeed_fps) * 10;
 timer_estado = 0;
 
-tempo_dano = room_speed / 4;
+tempo_dano = game_get_speed(gamespeed_fps) / 4;
 timer_dano = tempo_dano;
 //ssss	
 sat = 0;
@@ -18,7 +18,7 @@ velv = 0;
 vel = 1;
 //test
 //test2
-tempo_morte = room_speed;
+tempo_morte = game_get_speed(gamespeed_fps);
 
 alvo = noone;
 alvo_dir = 0;
@@ -26,7 +26,7 @@ duracao_ataque = 0.5;
 tempo_ataque = duracao_ataque;
 
 dano_timer = 0;
-tempo_dano = room_speed/8;
+tempo_dano = game_get_speed(gamespeed_fps)/8;
 
 sprite = sprite_index;
 xscale = 1;
@@ -38,7 +38,7 @@ muda_estado = function(_estado){
 	
 	if(timer_estado == tempo_estado or tempo_estado <= 0){
 		estado = _estado[irandom(array_length(_estado)-1)];
-		tempo_estado = room_speed * 10;
+		tempo_estado = game_get_speed(gamespeed_fps) * 10;
 	}
 }
 desenha_sprite = function(){

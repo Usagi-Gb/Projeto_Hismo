@@ -9,7 +9,7 @@ arma = noone;
 dano = false;
 vida_max = 3;
 vida = vida_max;
-tempo_inv = room_speed * 2;
+tempo_inv = game_get_speed(gamespeed_fps) * 2;
 
 olha_mouse = function(){
 	xscale = mouse_x - x != 0 ? sign(mouse_x - x) : 1;
@@ -56,7 +56,7 @@ joga_arma = function(){
 			arma.direction = arma.image_angle;
 			arma.atirar = false;
 			arma.pai = noone;
-			arma.delay_pega = room_speed * 2;
+			arma.delay_pega = game_get_speed(gamespeed_fps) * 2;
 			arma = noone;
 		}
 	}

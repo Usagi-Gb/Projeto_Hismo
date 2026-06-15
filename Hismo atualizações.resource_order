@@ -21,6 +21,7 @@
     {"name":"obj_cajado_axe","order":3,"path":"objects/obj_cajado_axe/obj_cajado_axe.yy",},
     {"name":"obj_cajado_verde","order":2,"path":"objects/obj_cajado_verde/obj_cajado_verde.yy",},
     {"name":"obj_cajado_vermelho","order":1,"path":"objects/obj_cajado_vermelho/obj_cajado_vermelho.yy",},
+    {"name":"obj_controlador_waves","order":7,"path":"objects/obj_controlador_waves/obj_controlador_waves.yy",},
     {"name":"obj_inimigo_pai","order":1,"path":"objects/obj_inimigo_pai/obj_inimigo_pai.yy",},
     {"name":"obj_pause","order":6,"path":"objects/obj_pause/obj_pause.yy",},
     {"name":"obj_tiro","order":1,"path":"objects/obj_tiro/obj_tiro.yy",},
