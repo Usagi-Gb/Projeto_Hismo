@@ -27,3 +27,14 @@ if (timer_next_wave > 0) {
         timer_next_wave = -1; 
     }
 }
+if (current_wave >= 1) {
+    if (global.conquistas[0].desbloqueado == false) {
+        global.conquistas[0].desbloqueado = true;
+    }
+}
+
+if (current_wave > 2) {
+    if (global.conquistas[1].desbloqueado == false) {
+        global.conquistas[1].desbloqueado = true;
+    }
+}
