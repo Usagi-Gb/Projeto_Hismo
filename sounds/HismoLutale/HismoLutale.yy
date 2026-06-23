@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"HismoLutale",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":28.525715,
+  "exportDir":"",
+  "name":"HismoLutale",
+  "parent":{
+    "name":"Musicas",
+    "path":"folders/Musicas.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"HismoLutale.mp3",
+  "volume":0.9,
+}
