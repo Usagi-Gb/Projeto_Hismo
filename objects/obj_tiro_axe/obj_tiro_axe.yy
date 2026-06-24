@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_tiro_axe",
-    "path":"sprites/spr_tiro_axe/spr_tiro_axe.yy",
+    "name":"nota",
+    "path":"sprites/nota/nota.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -2,7 +2,7 @@ global.conquistas = [
     {
         nome: "Laudo",
         desc_bloqueado: "...",
-        desc_desbloqueado: "Paciente Lucas está diagnosticado por Dr Mario Polombo com a condição neurológica amusia...",
+        desc_desbloqueado: "Paciente Lucas foi diagnosticado por Dr Mario Polombo como uma pessoa com distúrbio psicológico amusia...",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: Laudo,
         desbloqueado: true

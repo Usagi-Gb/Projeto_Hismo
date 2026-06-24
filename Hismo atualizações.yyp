@@ -82,8 +82,6 @@
     {"id":{"name":"spr_cadeado","path":"sprites/spr_cadeado/spr_cadeado.yy",},},
     {"id":{"name":"spr_cajado_axe","path":"sprites/spr_cajado_axe/spr_cajado_axe.yy",},},
     {"id":{"name":"spr_flauta","path":"sprites/spr_flauta/spr_flauta.yy",},},
-    {"id":{"name":"spr_item_bronze","path":"sprites/spr_item_bronze/spr_item_bronze.yy",},},
-    {"id":{"name":"spr_item_ouro","path":"sprites/spr_item_ouro/spr_item_ouro.yy",},},
     {"id":{"name":"spr_lizard_idle","path":"sprites/spr_lizard_idle/spr_lizard_idle.yy",},},
     {"id":{"name":"spr_lizard_run","path":"sprites/spr_lizard_run/spr_lizard_run.yy",},},
     {"id":{"name":"spr_player_idle","path":"sprites/spr_player_idle/spr_player_idle.yy",},},
