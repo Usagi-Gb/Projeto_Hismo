@@ -34,7 +34,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.3.217",
+    "IDEVersion":"2024.14.4.222",
   },
   "name":"Hismo atualizações",
   "resources":[
@@ -74,6 +74,7 @@
     {"id":{"name":"JornalCidadeMARLEY","path":"sprites/JornalCidadeMARLEY/JornalCidadeMARLEY.yy",},},
     {"id":{"name":"Laudo","path":"sprites/Laudo/Laudo.yy",},},
     {"id":{"name":"museu_viol_o","path":"sprites/museu_viol_o/museu_viol_o.yy",},},
+    {"id":{"name":"museu","path":"sprites/museu/museu.yy",},},
     {"id":{"name":"nota","path":"sprites/nota/nota.yy",},},
     {"id":{"name":"nota2","path":"sprites/nota2/nota2.yy",},},
     {"id":{"name":"partitura","path":"sprites/partitura/partitura.yy",},},

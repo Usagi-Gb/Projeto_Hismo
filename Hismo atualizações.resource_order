@@ -46,6 +46,7 @@
     {"name":"JornalCidadeMARLEY","order":4,"path":"sprites/JornalCidadeMARLEY/JornalCidadeMARLEY.yy",},
     {"name":"Laudo","order":5,"path":"sprites/Laudo/Laudo.yy",},
     {"name":"museu_viol_o","order":6,"path":"sprites/museu_viol_o/museu_viol_o.yy",},
+    {"name":"museu","order":17,"path":"sprites/museu/museu.yy",},
     {"name":"nota","order":1,"path":"sprites/nota/nota.yy",},
     {"name":"nota2","order":2,"path":"sprites/nota2/nota2.yy",},
     {"name":"partitura","order":7,"path":"sprites/partitura/partitura.yy",},
