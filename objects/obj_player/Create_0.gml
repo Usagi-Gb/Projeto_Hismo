@@ -3,6 +3,7 @@ velv = 0;
 max_vel = 3;
 vel = 0;
 move_dir = 0;
+game_over = false;
 
 arma = noone;
 
