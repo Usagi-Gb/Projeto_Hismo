@@ -47,6 +47,7 @@
     {"id":{"name":"obj_block","path":"objects/obj_block/obj_block.yy",},},
     {"id":{"name":"obj_bomba","path":"objects/obj_bomba/obj_bomba.yy",},},
     {"id":{"name":"obj_booby","path":"objects/obj_booby/obj_booby.yy",},},
+    {"id":{"name":"obj_boss","path":"objects/obj_boss/obj_boss.yy",},},
     {"id":{"name":"obj_cajado_axe","path":"objects/obj_cajado_axe/obj_cajado_axe.yy",},},
     {"id":{"name":"obj_cajado_verde","path":"objects/obj_cajado_verde/obj_cajado_verde.yy",},},
     {"id":{"name":"obj_cajado_vermelho","path":"objects/obj_cajado_vermelho/obj_cajado_vermelho.yy",},},

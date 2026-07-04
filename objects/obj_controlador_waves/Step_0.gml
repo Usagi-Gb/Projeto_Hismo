@@ -1,4 +1,4 @@
-// 1. Contagem dinâmica de inimigos vivos no mapa
+// 1. Contagem de inimigos vivos
 inimigos_vivos_no_mapa = 0;
 
 with (obj_inimigo_pai) {
@@ -7,14 +7,35 @@ with (obj_inimigo_pai) {
     }
 }
 
-// 2. Transição de Onda
-if (enemies_to_spawn <= 0 && inimigos_vivos_no_mapa == 0) {
-    current_wave++;
-    enemies_to_spawn = current_wave * 5; 
-}5
+// 2. Timer e transição de Wave / Boss
+if (enemies_to_spawn <= 0 && inimigos_vivos_no_mapa == 0 && !boss_spawnado) {
+    if (timer_next_wave == 0) {
+        timer_next_wave = 180; 
+    }
+}
 
-// 3. Sistema de Drop de Armas (A cada 2 ondas)
-if (current_wave > ultima_wave_verificada) {
+if (timer_next_wave > 0) {
+    timer_next_wave--;
+    
+    if (timer_next_wave <= 0) {
+        // Verifica se ainda NÃO é a última wave
+        if (current_wave < onda_maxima) {
+            current_wave++;
+            enemies_to_spawn = current_wave * 5; 
+        } 
+        // Se chegou na última wave, SPAWNA O BOSS!
+        else if (!boss_spawnado) {
+            boss_spawnado = true;
+            enemies_to_spawn = 0; // Para de nascer inimigos comuns
+            
+            // Cria o boss no centro da sala (Troque 'obj_boss' pelo nome do seu Boss)
+            instance_create_layer(room_width / 2, room_height / 2, "Instances", obj_boss);
+        }
+    }
+}
+
+// 3. Drop de Armas
+if (current_wave > ultima_wave_verificada && current_wave <= onda_maxima) {
     if (ultima_wave_verificada % 2 == 0) {
         
         var _arma_no_mapa = false;
@@ -42,8 +63,8 @@ if (current_wave > ultima_wave_verificada) {
     ultima_wave_verificada = current_wave;
 }
 
-// 4. Lógica de Spawn e Sorteio de Inimigos
-if (enemies_to_spawn > 0) {
+// 4. Lógica de Spawn Segura contra Paredes
+if (enemies_to_spawn > 0 && timer_next_wave <= 0 && !boss_spawnado) {
     spawn_timer--;
     
     if (spawn_timer <= 0) {
@@ -51,7 +72,7 @@ if (enemies_to_spawn > 0) {
         var _y = irandom_range(64, room_height - 64);
         var _pos_valida = false;
         
-        if (!place_meeting(_x, _y, obj_block)) {
+        if (collision_circle(_x, _y, 32, obj_block, false, true) == noone) {
             if (instance_exists(obj_player)) {
                 if (point_distance(_x, _y, obj_player.x, obj_player.y) > 150) {
                     _pos_valida = true;
