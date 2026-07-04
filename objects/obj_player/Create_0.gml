@@ -4,6 +4,8 @@ max_vel = 3;
 vel = 0;
 move_dir = 0;
 game_over = false;
+gameover_surf = -1; 
+ondas_alcancadas = 0;
 
 arma = noone;
 
