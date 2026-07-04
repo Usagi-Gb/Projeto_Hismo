@@ -1,4 +1,13 @@
+// --- GARANTIA DE ESTATÍSTICAS GLOBAIS ---
+// Declaramos aqui para o jogo nunca dar erro de "not set before reading"
+global.inimigos_mortos = 0;
+global.lizards_mortos = 0;
+global.sapos_mortos = 0;
+global.ritmos_acertados = 0;
 global.conquistas = [
+    // ==========================================
+    // ITENS ORIGINAIS
+    // ==========================================
     {
         nome: "Laudo",
         desc_bloqueado: "...",
@@ -18,7 +27,7 @@ global.conquistas = [
 	{
         nome: "Acidentes",
         desc_bloqueado: "Recompensa por desbloquear *Jingle* e ambas partituras apenas Sol.",
-        desc_desbloqueado: "Os acidentes são parte vital de muitas sonoridades de qualquer música que as utilize, sendo as mais comuns o sustenido e o Bmol” *Partitura com 3 notas, Sol Bmol, Sol, Sol#.",
+        desc_desbloqueado: "Os acidentes são parte vital de muitas sonoridades de qualquer música que as utilize, sendo as mais comuns o sustenido e o Bmol. *Partitura com 3 notas, Sol Bmol, Sol, Sol#.",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: AcidenteL_,
         desbloqueado: false
@@ -30,5 +39,129 @@ global.conquistas = [
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: Acidentes,
         desbloqueado: false
-    }
+    },
+    
+    // ==========================================
+    // OS 16 NOVOS ITENS DO MUSEU
+    // ==========================================
+    {
+        nome: "Clave de Fá",
+        desc_bloqueado: "...",
+        desc_desbloqueado: "Descrição da Clave de Fá...",
+        spr_bloqueado: spr_cadeado,
+        spr_desbloqueado: Clave_Fa,
+        desbloqueado: false
+    },
+    {
+        nome: "Clave de Sol",
+        desc_bloqueado: "...",
+        desc_desbloqueado: "Descrição da Clave de Sol...",
+        spr_bloqueado: spr_cadeado,
+        spr_desbloqueado: clava_de_sol,
+        desbloqueado: false
+    },
+    {
+        nome: "Jingle",
+        desc_bloqueado: "...",
+        desc_desbloqueado: "Descrição do Jingle...",
+        spr_bloqueado: spr_cadeado,
+        spr_desbloqueado: Jingle,
+        desbloqueado: false
+    },
+    {
+        nome: "Jornal Marley",
+        desc_bloqueado: "...",
+        desc_desbloqueado: "Descrição do Jornal Cidade MARLEY...",
+        spr_bloqueado: spr_cadeado,
+        spr_desbloqueado: JornalCidadeMARLEY,
+        desbloqueado: false
+    },
+    {
+        nome: "Tom da Floresta",
+        desc_bloqueado: "...",
+        desc_desbloqueado: "Descrição do Tom da Floresta...",
+        spr_bloqueado: spr_cadeado,
+        spr_desbloqueado: Tom_da_Floresta,
+        desbloqueado: false
+    },
+    {
+        nome: "Oito Notas",
+        desc_bloqueado: "...",
+        desc_desbloqueado: "Descrição das 8 notas...",
+        spr_bloqueado: spr_cadeado,
+        spr_desbloqueado: _8_notas,
+        desbloqueado: false
+    },
+    {
+        nome: "Nota Musical 1",
+        desc_bloqueado: "...",
+        desc_desbloqueado: "Descrição da primeira nota...",
+        spr_bloqueado: spr_cadeado,
+        spr_desbloqueado: nota,
+        desbloqueado: false
+    },
+    {
+        nome: "Nota Musical 2",
+        desc_bloqueado: "...",
+        desc_desbloqueado: "Descrição da segunda nota...",
+        spr_bloqueado: spr_cadeado,
+        spr_desbloqueado: nota2,
+        desbloqueado: false
+    },
+    {
+        nome: "Flauta",
+        desc_bloqueado: "...",
+        desc_desbloqueado: "Descrição da Flauta...",
+        spr_bloqueado: spr_cadeado,
+        spr_desbloqueado: spr_flauta,
+        desbloqueado: false
+    },
+    {
+        nome: "Violão",
+        desc_bloqueado: "...",
+        desc_desbloqueado: "Descrição do Violão...",
+        spr_bloqueado: spr_cadeado,
+        spr_desbloqueado: viol_o,
+        desbloqueado: false
+    },
+    {
+        nome: "Violão do Museu",
+        desc_bloqueado: "...",
+        desc_desbloqueado: "Descrição do Violão do Museu...",
+        spr_bloqueado: spr_cadeado,
+        spr_desbloqueado: museu_viol_o,
+        desbloqueado: false
+    },
+    {
+        nome: "Ukulele",
+        desc_bloqueado: "...",
+        desc_desbloqueado: "Descrição do Ukulele...",
+        spr_bloqueado: spr_cadeado,
+        spr_desbloqueado: ukulele,
+        desbloqueado: false
+    },
+    {
+        nome: "Bandana",
+        desc_bloqueado: "...",
+        desc_desbloqueado: "Descrição da Bandana...",
+        spr_bloqueado: spr_cadeado,
+        spr_desbloqueado: bandana,
+        desbloqueado: false
+    },
+    {
+        nome: "Arco",
+        desc_bloqueado: "...",
+        desc_desbloqueado: "Descrição do Arco...",
+        spr_bloqueado: spr_cadeado,
+        spr_desbloqueado: bow,
+        desbloqueado: false
+    },
+    {
+        nome: "Colar",
+        desc_bloqueado: "...",
+        desc_desbloqueado: "Descrição do Colar...",
+        spr_bloqueado: spr_cadeado,
+        spr_desbloqueado: collar2,
+        desbloqueado: false
+    },
 ];

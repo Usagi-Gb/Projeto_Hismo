@@ -20,7 +20,11 @@ leva_dano = function(_dano){
         else vida_atual -= _dano;
         
         dano = true;
-        if (vida_atual <= 0) estado = estado_morto;
+        if (vida_atual <= 0) {
+            global.inimigos_mortos++; // Conta para o total
+            global.sapos_mortos++;    // <--- NOVO: Conta só os Sapos
+            estado = estado_morto;
+        }
     }
 }
 

@@ -175,7 +175,10 @@ leva_dano = function(_dano){
         dano = true;
         
         // 3. Verifica IMEDIATAMENTE se esse tiro matou o inimigo
+        // 3. Verifica IMEDIATAMENTE se esse tiro matou o inimigo
         if (vida_atual <= 0) {
+            global.inimigos_mortos++; // Conta para o total
+            global.lizards_mortos++;  // <--- NOVO: Conta só os Lizards
             estado = estado_morto;
         }
         // 4. Se ele NÃO morreu, aplicamos a "Super Armadura"!

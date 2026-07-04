@@ -1,24 +1,78 @@
 // ===================================================
 // 1. SISTEMA DE GAME OVER E SALVAMENTO DE CONQUISTAS
 // ===================================================
+// ===================================================
+// 1. SISTEMA DE GAME OVER E SALVAMENTO DE CONQUISTAS
+// ===================================================
 if (vida <= 0 && !game_over) {
     game_over = true;
     
-    // IMPORTANTE: Ler e salvar a conquista ANTES de congelar o jogo!
+    // Limpa a lista para garantir que começa vazia
+    lista_conquistas = []; 
+    
+    // Pega a onda atual ANTES de congelar o jogo!
+    var _ondas = 0;
     if (instance_exists(obj_controlador_waves)) {
-        ondas_alcancadas = obj_controlador_waves.current_wave;
+        _ondas = obj_controlador_waves.current_wave;
+        ondas_alcancadas = _ondas; // Atualiza a variável original por segurança
     }
     
-    // Tira a foto da tela para o fundo
+    // --- ESTATÍSTICAS BASE ---
+    array_push(lista_conquistas, "Ondas Concluidas: " + string(_ondas - 1));
+    array_push(lista_conquistas, "Inimigos Mortos: " + string(global.inimigos_mortos));
+    
+    // --- TROFÉUS PADRÃO ---
+    if (_ondas >= 5) {
+        array_push(lista_conquistas, "Trofeu: VETERANO DE GUERRA!");
+    }
+    if (global.inimigos_mortos >= 20) {
+        array_push(lista_conquistas, "Trofeu: EXTERMINADOR DE MONSTROS!");
+    }
+    if (global.ritmos_acertados >= 15) {
+        array_push(lista_conquistas, "Trofeu: MESTRE DO RITMO!");
+    }
+    
+    // --- DESBLOQUEIOS SECRETOS DO MUSEU ---
+    var _tam_museu = array_length(global.conquistas);
+
+    // Desbloqueio Oculto: Bandana (10 Lizards)
+    if (global.lizards_mortos >= 10) {
+        for (var i = 0; i < _tam_museu; i++) {
+            if (global.conquistas[i].nome == "Bandana" && !global.conquistas[i].desbloqueado) {
+                global.conquistas[i].desbloqueado = true; // Libera no museu
+                array_push(lista_conquistas, "Item Secreto Revelado: BANDANA!"); 
+                break;
+            }
+        }
+    }
+
+    // Desbloqueio Oculto: Colar (4 Sapos)
+    if (global.sapos_mortos >= 4) {
+        for (var i = 0; i < _tam_museu; i++) {
+            if (global.conquistas[i].nome == "Colar" && !global.conquistas[i].desbloqueado) {
+                global.conquistas[i].desbloqueado = true; // Libera no museu
+                array_push(lista_conquistas, "Item Secreto Revelado: COLAR!"); 
+                break;
+            }
+        }
+    }
+
+    // --- MENSAGEM DE INCENTIVO ---
+    // Se a lista tiver apenas 2 itens (as estatísticas base), significa que não ganhou troféus
+    if (array_length(lista_conquistas) <= 2) {
+         array_push(lista_conquistas, "Dica: Tente sobreviver mais tempo!");
+    }
+
+    // --- CONGELAMENTO DA TELA ---
     var _width = surface_get_width(application_surface);
     var _height = surface_get_height(application_surface);
     gameover_surf = surface_create(_width, _height);
     surface_copy(gameover_surf, 0, 0, application_surface);
     
-    // AGORA SIM: Congela tudo (inimigos, controlador, tiros)
     instance_deactivate_all(true);
 }
 
+// Lógica para sair da tela de Game Over
 if (game_over) {
     if (keyboard_check_pressed(vk_space)) {
         instance_activate_all();
@@ -30,7 +84,6 @@ if (game_over) {
     exit; // Impede o player de se mover enquanto morto
 }
 
-
 // ===================================================
 // 2. LEITURA DOS INPUTS (Dash e Movimento)
 // ===================================================
@@ -38,7 +91,7 @@ var up = keyboard_check(ord("W"));
 var down = keyboard_check(ord("S"));
 var left = keyboard_check(ord("A"));
 var right = keyboard_check(ord("D"));
-var _tecla_dash = keyboard_check_pressed(vk_shift);
+var _tecla_dash = keyboard_check_pressed(ord("Q"));
 
 var _movendo = (up ^^ down || left ^^ right);
 
@@ -70,7 +123,7 @@ if (is_dashing) {
     // ESTADO DASH
     vel = dash_speed; 
     move_dir = dash_dir;
-    image_blend = c_yellow; 
+    image_blend = c_gray; 
     
     // Rastro visual do dash (cria o fantasma)
     if (dash_timer % 2 == 0) {
