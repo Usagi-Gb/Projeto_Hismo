@@ -12,6 +12,15 @@ vida_max = 3;
 vida = vida_max;
 tempo_inv = game_get_speed(gamespeed_fps) * 2;
 
+// --- Variáveis do Dash ---
+is_dashing = false;
+dash_speed = 8;       // Velocidade durante o dash
+dash_duration = 15;   // Quantos frames o dash vai durar
+dash_timer = 0;       // Cronómetro do dash
+dash_cooldown = 60;   // Tempo de espera para usar de novo (ex: 60 frames = 1 seg)
+dash_cd_timer = 0;
+dash_dir = 0;         // Direção para onde o dash vai;
+ritmo_timer = 0;
 olha_mouse = function(){
 	xscale = mouse_x - x != 0 ? sign(mouse_x - x) : 1;
 }
@@ -26,10 +35,15 @@ efeito_dano = function(){
 }
 
 toma_dano = function(){
-	if(dano) return;
-	vida--;
-	dano = true;
-	alarm[0] = tempo_inv; 
+	toma_dano = function(){
+    // ADICIONAMOS "|| is_dashing" AQUI! 
+    // Se ele já está a tomar dano OU está a dar dash, ele ignora o golpe completamente!
+    if(dano || is_dashing) return; 
+		
+    vida--;
+    dano = true;
+    alarm[0] = tempo_inv;
+}
 }
 
 usa_arma = function(){

@@ -11,6 +11,7 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_arma_pai","path":"objects/obj_arma_pai/obj_arma_pai.yy",},"propertyId":{"name":"espera_tiro","path":"objects/obj_arma_pai/obj_arma_pai.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_arma_pai","path":"objects/obj_arma_pai/obj_arma_pai.yy",},"propertyId":{"name":"knokback","path":"objects/obj_arma_pai/obj_arma_pai.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_arma_pai","path":"objects/obj_arma_pai/obj_arma_pai.yy",},"propertyId":{"name":"qtd","path":"objects/obj_arma_pai/obj_arma_pai.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"3",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_arma_pai","path":"objects/obj_arma_pai/obj_arma_pai.yy",},"propertyId":{"name":"dano_arma","path":"objects/obj_arma_pai/obj_arma_pai.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
   ],
   "parent":{
     "name":"Armas",
@@ -38,8 +39,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_cajado_axe",
-    "path":"sprites/spr_cajado_axe/spr_cajado_axe.yy",
+    "name":"ukulele",
+    "path":"sprites/ukulele/ukulele.yy",
   },
   "spriteMaskId":null,
   "visible":true,

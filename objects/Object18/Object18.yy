@@ -1,22 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_tiro_axe",
+  "%Name":"Object18",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_tiro_axe",
-  "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_tiro","path":"objects/obj_tiro/obj_tiro.yy",},"propertyId":{"name":"dano","path":"objects/obj_tiro/obj_tiro.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"2",},
-  ],
+  "name":"Object18",
+  "overriddenProperties":[],
   "parent":{
-    "name":"Projeteis",
-    "path":"folders/Objects/Projeteis.yy",
+    "name":"Inimigos",
+    "path":"folders/Objects/Inimigos.yy",
   },
   "parentObjectId":{
-    "name":"obj_tiro",
-    "path":"objects/obj_tiro/obj_tiro.yy",
+    "name":"obj_inimigo_pai",
+    "path":"objects/obj_inimigo_pai/obj_inimigo_pai.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -35,10 +33,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"nota",
-    "path":"sprites/nota/nota.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

@@ -1,0 +1,1 @@
+tempo_explosao = 90;

@@ -1,42 +1,43 @@
-// 1. Descobrir a posição exata da música e calcular as frações
-var pos = audio_sound_get_track_position(music_instance); //
-var current_beat = pos / sec_per_beat; //
-beat_fraction = frac(current_beat); // Guardamos na variável da instância para usar no Draw GUI
+// 1. Descobrir a posição exata da música e calcular a fração
+var pos = audio_sound_get_track_position(music_instance);
+var current_beat = pos / sec_per_beat;
+beat_fraction = frac(current_beat);
 
 // 2. Verificar se estamos dentro da Janela de Tolerância
-in_window = false; //
-if ((beat_fraction < tolerance) || (beat_fraction > (1.0 - tolerance))) { //
-    in_window = true; //
+in_window = false;
+if ((beat_fraction < tolerance) || (beat_fraction > (1.0 - tolerance))) {
+    in_window = true;
 }
 
-// 3. Resetar a permissão de ataque e animar coração
-if (!in_window) { //
-    can_hit = true; //
-    heart_scale = lerp(heart_scale, 1.0, 0.1); // Coração volta suavemente ao tamanho normal
+// 3. Resetar a permissão de ataque e animar o coração da UI
+if (!in_window) {
+    can_hit = true;
+    heart_scale = lerp(heart_scale, 1.0, 0.1); // Coração normal
 } else {
-    heart_scale = lerp(heart_scale, 1.5, 0.35); // Coração "bate" (aumenta) por estar na janela
+    heart_scale = lerp(heart_scale, 1.4, 0.3); // Coração bate
 }
 
-// 4. Lidar com o Input do Jogador
-var attack_key = keyboard_check_pressed(vk_space); //
+// 4. Lidar com o Input do Jogador (tecla de acertar o ritmo)
+var attack_key = keyboard_check_pressed(vk_space); 
 
-if (attack_key) { //
-    if (in_window && can_hit) { //
-        show_debug_message("Sucesso! Ataque realizado."); //
+if (attack_key) {
+    if (in_window && can_hit) {
+        show_debug_message("Sucesso! Acertou o ritmo.");
         
-        // Em vez de só mostrar a mensagem, podemos forçar o jogador a atacar
+        // ---> A INTEGRAÇÃO COM O PLAYER ACONTECE AQUI <---
         if (instance_exists(obj_player)) {
-            // Opcional: Despoletar um ataque do jogador aqui
+            // Diz ao player para manter o brilho azul (c_aqua) por 45 frames
+            obj_player.ritmo_timer = 45; 
         }
         
-        can_hit = false; //
+        can_hit = false; // Impede que o jogador clique várias vezes na mesma batida
     } else {
-        show_debug_message("Errou o ritmo! Sofreu dano."); //
+        show_debug_message("Errou o ritmo! Sofreu dano.");
         
-        // Integração corrigida: Em vez de usar player_hp, usamos o sistema real do obj_player
+        // Pune o jogador caso ele clique fora do ritmo
         if (instance_exists(obj_player)) {
             with (obj_player) {
-                toma_dano(); // Esta função já cuida da invencibilidade e subtrai a vida
+                toma_dano(); // Aplica o hit normal com imunidade temporária
             }
         }
     }

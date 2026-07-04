@@ -1,5 +1,6 @@
 // Inherit the parent event
 event_inherited();
+
 espera = game_get_speed(gamespeed_fps) * .5;
 vel = 0;
 rot = -10;

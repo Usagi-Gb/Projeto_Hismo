@@ -1,7 +1,9 @@
 {
   "$GMObject":"",
   "%Name":"obj_cajado_verde",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_cajado_verde",
   "overriddenProperties":[
@@ -11,6 +13,7 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_arma_pai","path":"objects/obj_arma_pai/obj_arma_pai.yy",},"propertyId":{"name":"knokback","path":"objects/obj_arma_pai/obj_arma_pai.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_arma_pai","path":"objects/obj_arma_pai/obj_arma_pai.yy",},"propertyId":{"name":"imprecisao","path":"objects/obj_arma_pai/obj_arma_pai.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"2",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_arma_pai","path":"objects/obj_arma_pai/obj_arma_pai.yy",},"propertyId":{"name":"qtd","path":"objects/obj_arma_pai/obj_arma_pai.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_arma_pai","path":"objects/obj_arma_pai/obj_arma_pai.yy",},"propertyId":{"name":"dano_arma","path":"objects/obj_arma_pai/obj_arma_pai.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"3",},
   ],
   "parent":{
     "name":"Armas",
@@ -38,8 +41,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_flauta",
-    "path":"sprites/spr_flauta/spr_flauta.yy",
+    "name":"bow",
+    "path":"sprites/bow/bow.yy",
   },
   "spriteMaskId":null,
   "visible":true,
