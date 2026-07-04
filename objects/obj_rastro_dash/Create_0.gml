@@ -1,0 +1,1 @@
+image_alpha = 0.5; // Começa com 50% de transparência
