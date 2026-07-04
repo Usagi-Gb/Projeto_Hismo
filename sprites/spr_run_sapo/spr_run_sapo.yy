@@ -45,8 +45,8 @@
   },
   "origin":9,
   "parent":{
-    "name":"Inimigos",
-    "path":"folders/Objects/Inimigos.yy",
+    "name":"Perereca",
+    "path":"folders/Sprites/Inimigos/Perereca.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -176,9 +176,18 @@ leva_dano = function(_dano){
         
         // 3. Verifica IMEDIATAMENTE se esse tiro matou o inimigo
         // 3. Verifica IMEDIATAMENTE se esse tiro matou o inimigo
+        // 3. Verifica IMEDIATAMENTE se esse tiro matou o inimigo
         if (vida_atual <= 0) {
-            global.inimigos_mortos++; // Conta para o total
-            global.lizards_mortos++;  // <--- NOVO: Conta só os Lizards
+            global.inimigos_mortos++; 
+            global.lizards_mortos++; // (ou sapos_mortos dependendo do inimigo)
+            
+            // --- NOVO: SISTEMA DE DROP (20% DE CHANCE) ---
+            var _chance = irandom(100); // Sorteia um número de 0 a 100
+            if (_chance <= 100) {
+                // Cria o cupmagic exatamente na posição onde o monstro morreu
+                instance_create_layer(x, y, "Instances", obj_cupmagic);
+            }
+            
             estado = estado_morto;
         }
         // 4. Se ele NÃO morreu, aplicamos a "Super Armadura"!

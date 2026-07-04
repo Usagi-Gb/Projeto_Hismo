@@ -1,27 +1,27 @@
-// ====================================================
-// 1. HUD NORMAL (Enquanto o jogador está vivo)
-// ====================================================
 if (!game_over) {
-    // Garante que a vida seja desenhada na cor branca e no canto esquerdo
     draw_set_alpha(1.0);
     draw_set_color(c_white);
-    draw_set_halign(fa_left);
-    draw_set_valign(fa_top);
     
-    // Desenha a sua variável de vida original
-    draw_text(20, 20, vida);
+    var _x_inicial = 20; // Posição X do primeiro coração
+    var _y_inicial = 20; // Posição Y (altura) dos corações no topo da tela
+    var _espacamento = 35; // Distância entre cada coração
+
+    for (var i = 0; i < vida_max; i++) {
+        var _pos_x = _x_inicial + (i * _espacamento);
+        if (i < vida) {
+            draw_sprite(spr_coracao, 0, _pos_x, _y_inicial);
+        } 
+        else {
+            draw_sprite(spr_coracao_hit, 0, _pos_x, _y_inicial);
+        }
+    }
 }
 
-// ====================================================
-// 2. TELA DE GAME OVER (Quando a vida chega a zero)
-// ====================================================
 else {
-    // 1. Desenha a foto do jogo congelado no fundo
     if (surface_exists(gameover_surf)) {
         draw_surface(gameover_surf, 0, 0);
     }
     
-    // 2. Desenha a camada escura por cima
     var _largura = display_get_gui_width();
     var _altura = display_get_gui_height();
     
@@ -38,20 +38,17 @@ else {
     draw_set_color(c_red);
     draw_text_transformed(_largura / 2, _altura / 2 - 80, "GAME OVER", 2, 2, 0); 
     
-    // 5. Desenhar as Conquistas
     // 5. Desenhar o Título das Conquistas
     draw_set_color(c_yellow);
     draw_text(_largura / 2, _altura / 2 - 20, "Conquistas Obtidas:");
     draw_set_color(c_white);
-    
-    // --- NOVO: LENDO A LISTA DE CONQUISTAS ---
+	
     // Descobre quantos itens/troféus o jogador ganhou nessa partida
     var _tam = array_length(lista_conquistas);
     
     // O 'for' vai rodar e desenhar linha por linha
     for (var i = 0; i < _tam; i++) {
         // A matemática '+ (i * 25)' faz com que a próxima frase desça 25 pixels,
-        // garantindo que os textos nunca fiquem um por cima do outro!
         draw_text(_largura / 2, _altura / 2 + 15 + (i * 25), "- " + lista_conquistas[i]);
     }
 

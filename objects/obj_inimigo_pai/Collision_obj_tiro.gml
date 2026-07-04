@@ -1,3 +1,6 @@
+if (estado == estado_morto) {
+    exit; 
+}
 // 1. Pega a direção da bala para o knockback
 p_dir = other.direction;
 

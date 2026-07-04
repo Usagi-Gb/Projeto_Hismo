@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Hismo atualizações",
-    "path":"Hismo atualizações.yyp",
+    "name":"Ratão",
+    "path":"folders/Sprites/Inimigos/Ratão.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

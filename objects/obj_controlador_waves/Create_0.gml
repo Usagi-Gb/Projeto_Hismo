@@ -11,3 +11,7 @@ global.inimigos_mortos = 0;
 global.lizards_mortos = 0;
 global.sapos_mortos = 0;
 global.ritmos_acertados = 0;
+
+inimigos_vivos_no_mapa = 0;
+ultima_wave_verificada = 1;
+lista_armas_drop = [obj_cajado_axe,obj_cajado_verde,obj_cajado_vermelho];
