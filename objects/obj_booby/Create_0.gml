@@ -1,5 +1,3 @@
-// Inherit the parent event
-event_inherited();
  event_inherited();
 vida_max = 3;
 vida_atual = vida_max;
@@ -27,7 +25,6 @@ alvo_dir = 0;
 duracao_ataque = 0.5;
 tempo_ataque = duracao_ataque;
 
-jogou_bomba = false;
 dano_timer = 0;
 tempo_dano = game_get_speed(gamespeed_fps)/8;
 
@@ -131,28 +128,15 @@ estado_prepara_ataque = function(){
 }
 
 estado_ataque = function(){
-    tempo_ataque -= delta_time / 1000000;
-    image_blend = c_white;
-    velh = 0; // O Ratão fica parado enquanto joga a bomba
-    velv = 0;
-    
-    // Só cria a bomba no exato frame que o ataque começa
-    // Usamos uma variável auxiliar "jogou_bomba" para garantir que ele não crie 60 bombas por segundo
-    if (!jogou_bomba) {
-        var _bomba = instance_create_layer(x, y, "Instances", obj_bomba);
-        
-        // Joga a bomba na direção que o player estava
-        _bomba.speed = 5; // Força do arremesso
-        _bomba.direction = alvo_dir; 
-        
-        jogou_bomba = true;
-    }
-    
-    if (tempo_ataque <= 0){	
-        estado = estado_parado;
-        tempo_ataque = duracao_ataque;
-        jogou_bomba = false; // Reseta para o próximo ataque
-    }
+	tempo_ataque -= delta_time / 1000000;
+	image_blend = c_white;
+	velh = lengthdir_x(vel * 4, alvo_dir);
+	velv = lengthdir_y(vel * 4, alvo_dir);
+	
+	if(tempo_ataque <= 0){
+		estado = estado_parado;
+		tempo_ataque = duracao_ataque;
+	}
 }
 estado_dano = function(){
 	timer_dano --;
@@ -202,6 +186,4 @@ leva_dano = function(_dano){
         }
     }
 }
-
-
 estado = estado_parado;

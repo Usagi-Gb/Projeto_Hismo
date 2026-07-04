@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite38",
-    "path":"sprites/Sprite38/Sprite38.yy",
+    "name":"spr_explosao",
+    "path":"sprites/spr_explosao/spr_explosao.yy",
   },
   "spriteMaskId":null,
   "visible":true,

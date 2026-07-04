@@ -39,8 +39,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_lizard_idle",
-    "path":"sprites/spr_lizard_idle/spr_lizard_idle.yy",
+    "name":"spr_run_sapo",
+    "path":"sprites/spr_run_sapo/spr_run_sapo.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -48,21 +48,42 @@ if (enemies_to_spawn > 0 && wave_ready) {
             _tentativas++;
         }
         
-        // Só cria o inimigo se encontrou uma posição livre
+       // Só cria o inimigo se encontrou uma posição livre
         if (_pos_valida) {
-            instance_create_layer(_x, _y, "Instances", obj_lizard);
+            
+            // Variável que vai guardar qual inimigo será criado nesta rodada
+            var _inimigo_escolhido = obj_booby; // Padrão: Usa o Booby (substituto do Lizard)
+            
+            if (current_wave >= 5) {
+                // Wave 5 em diante: 1/3 de chance para cada um (Lizard/Booby, Sapo, Ratão)
+                var _sorteio = irandom(2); // Sorteia entre 0, 1 e 2
+                
+                if (_sorteio == 0) _inimigo_escolhido = obj_booby; // Ou obj_lizard se não tiver apagado
+                else if (_sorteio == 1) _inimigo_escolhido = obj_sapo;
+                else _inimigo_escolhido = obj_ratao;
+            }
+            else if (current_wave >= 3) {
+                // Wave 3 e 4: Metade Booby, Metade Sapo
+                var _sorteio = irandom(1); // Sorteia entre 0 e 1
+                
+                if (_sorteio == 0) _inimigo_escolhido = obj_booby;
+                else _inimigo_escolhido = obj_sapo;
+            }
+            // (Se for wave 1 ou 2, o código simplesmente ignora os IFs e usa a variável padrão obj_booby)
+
+            // Cria o inimigo sorteado!
+            instance_create_layer(_x, _y, "Instances", _inimigo_escolhido);
+            
             enemies_to_spawn--;
             spawn_timer = spawn_cooldown; 
         } else {
-            // Se falhou as 10 tentativas (espaço muito apertado), 
-            // manda tentar novamente na próxima frame de forma instantânea.
             spawn_timer = 1; 
+        } 
         }
     }
-}
 
 // ... Resto do seu código do Step abaixo (timer_next_wave, conquistas, etc.)
-if (enemies_to_spawn == 0 && instance_number(obj_lizard) == 0 && timer_next_wave == -1) {
+if (enemies_to_spawn == 0 && instance_number(obj_booby) == 0 && timer_next_wave == -1) {
     timer_next_wave = game_get_speed(gamespeed_fps) * 4;
     wave_ready = false;
 }
