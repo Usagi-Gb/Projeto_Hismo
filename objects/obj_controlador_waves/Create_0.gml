@@ -1,6 +1,6 @@
 // Variáveis de controle
 current_wave = 1;
-onda_maxima = 10; // Defina aqui qual será a última wave antes do boss!
+onda_maxima = 6; // Defina aqui qual será a última wave antes do boss!
 boss_spawnado = false;
 enemies_to_spawn = 5; 
 spawn_timer = 0;

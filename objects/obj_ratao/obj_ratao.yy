@@ -33,7 +33,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_ratao",
+    "path":"sprites/spr_ratao/spr_ratao.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

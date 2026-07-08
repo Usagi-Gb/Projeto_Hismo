@@ -9,8 +9,8 @@
   "name":"obj_bomba",
   "overriddenProperties":[],
   "parent":{
-    "name":"Armas",
-    "path":"folders/Objects/Armas.yy",
+    "name":"Projeteis",
+    "path":"folders/Objects/Projeteis.yy",
   },
   "parentObjectId":null,
   "persistent":false,

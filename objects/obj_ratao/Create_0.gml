@@ -61,7 +61,7 @@ desenha_sombra = function(){
 
 // 1. O inimigo não descansa mais se o jogador estiver vivo
 estado_parado = function(){
-    sprite = spr_lizard_idle;
+    sprite = spr_ratao;
     velh = 0;
     velv = 0;
     
