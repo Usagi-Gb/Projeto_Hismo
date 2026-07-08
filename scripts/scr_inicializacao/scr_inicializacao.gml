@@ -30,7 +30,7 @@ global.conquistas = [
         desc_desbloqueado: "Os acidentes são parte vital de muitas sonoridades de qualquer música que as utilize, sendo as mais comuns o sustenido e o Bmol. *Partitura com 3 notas, Sol Bmol, Sol, Sol#.",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: AcidenteL_,
-        desbloqueado: false
+        desbloqueado: true
     },
 	{
         nome: "Crescente",
@@ -38,7 +38,7 @@ global.conquistas = [
         desc_desbloqueado: "No processo de escritura você pode conectar duas notas para criar ou uma prolongação ou, neste caso, uma dinâmica de em uma só leva crescer ou decrescer até a nota alvo.",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: Acidentes,
-        desbloqueado: false
+        desbloqueado: true
     },
     
     // ==========================================
@@ -50,7 +50,7 @@ global.conquistas = [
         desc_desbloqueado: "Descrição da Clave de Fá...",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: Clave_Fa,
-        desbloqueado: false
+        desbloqueado: true
     },
     {
         nome: "Clave de Sol",
@@ -58,7 +58,7 @@ global.conquistas = [
         desc_desbloqueado: "Descrição da Clave de Sol...",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: clava_de_sol,
-        desbloqueado: false
+        desbloqueado: true
     },
     {
         nome: "Jingle",
@@ -66,7 +66,7 @@ global.conquistas = [
         desc_desbloqueado: "Descrição do Jingle...",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: Jingle,
-        desbloqueado: false
+        desbloqueado: true
     },
     {
         nome: "Jornal Marley",
@@ -74,7 +74,7 @@ global.conquistas = [
         desc_desbloqueado: "Descrição do Jornal Cidade MARLEY...",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: JornalCidadeMARLEY,
-        desbloqueado: false
+        desbloqueado: true
     },
     {
         nome: "Tom da Floresta",
@@ -82,7 +82,7 @@ global.conquistas = [
         desc_desbloqueado: "Descrição do Tom da Floresta...",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: Tom_da_Floresta,
-        desbloqueado: false
+        desbloqueado: true
     },
     {
         nome: "Oito Notas",
@@ -90,7 +90,7 @@ global.conquistas = [
         desc_desbloqueado: "Descrição das 8 notas...",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: _8_notas,
-        desbloqueado: false
+        desbloqueado: true
     },
     {
         nome: "Nota Musical 1",
@@ -98,7 +98,7 @@ global.conquistas = [
         desc_desbloqueado: "Descrição da primeira nota...",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: nota,
-        desbloqueado: false
+        desbloqueado: true
     },
     {
         nome: "Nota Musical 2",
@@ -106,7 +106,7 @@ global.conquistas = [
         desc_desbloqueado: "Descrição da segunda nota...",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: nota2,
-        desbloqueado: false
+        desbloqueado: true
     },
     {
         nome: "Flauta",
@@ -114,7 +114,7 @@ global.conquistas = [
         desc_desbloqueado: "Descrição da Flauta...",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: spr_flauta,
-        desbloqueado: false
+        desbloqueado: true
     },
     {
         nome: "Violão",
@@ -122,7 +122,7 @@ global.conquistas = [
         desc_desbloqueado: "Descrição do Violão...",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: viol_o,
-        desbloqueado: false
+        desbloqueado: true
     },
     {
         nome: "Violão do Museu",

@@ -7,7 +7,7 @@ with (obj_inimigo_pai) {
     }
 }
 
-// 2. Timer e transição de Wave / Boss
+// 2. Timer e transição de Wave / Room do Boss
 if (enemies_to_spawn <= 0 && inimigos_vivos_no_mapa == 0 && !boss_spawnado) {
     if (timer_next_wave == 0) {
         timer_next_wave = 180; 
@@ -18,18 +18,16 @@ if (timer_next_wave > 0) {
     timer_next_wave--;
     
     if (timer_next_wave <= 0) {
-        // Verifica se ainda NÃO é a última wave
         if (current_wave < onda_maxima) {
             current_wave++;
             enemies_to_spawn = current_wave * 5; 
         } 
-        // Se chegou na última wave, SPAWNA O BOSS!
         else if (!boss_spawnado) {
             boss_spawnado = true;
-            enemies_to_spawn = 0; // Para de nascer inimigos comuns
+            enemies_to_spawn = 0; 
             
-            // Cria o boss no centro da sala (Troque 'obj_boss' pelo nome do seu Boss)
-            instance_create_layer(room_width / 2, room_height / 2, "Instances", obj_boss);
+            // Vai para a sala do Boss
+            room_goto(room_boss); 
         }
     }
 }

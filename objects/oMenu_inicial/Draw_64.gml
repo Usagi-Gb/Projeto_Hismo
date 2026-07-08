@@ -31,7 +31,7 @@ var y2 = _hgui/2 + _hstr / 2 + _hstr * i;
 					room_goto(roomjogo);
 					break;
 				case menu_inicial[1]:
-					room_goto(roomconfig);
+					room_goto(roomsobre);
 					break;
 				case menu_inicial[2]:
 					room_goto(roommuseu);
