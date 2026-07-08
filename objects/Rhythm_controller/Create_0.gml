@@ -1,6 +1,9 @@
 // --- CONFIGURAÇÕES DA MÚSICA ---
-bpm = 90; //
+bpm = 66; //
 sec_per_beat = 60 / bpm; // Duração de uma batida em segundos
+
+//Fecha a trilha que estiver tocando para evitar duplicidade.
+audio_stop_all();
 
 // Começa a tocar a música. Lembre-se de substituir 'snd_sua_musica' pelo nome real do seu som!
 music_instance = audio_play_sound(HismoStagio1, 1, true); //

@@ -56,6 +56,7 @@
     {"name":"clava_de_sol","order":14,"path":"sprites/clava_de_sol/clava_de_sol.yy",},
     {"name":"Clave_Fa","order":15,"path":"sprites/Clave_Fa/Clave_Fa.yy",},
     {"name":"collar2","order":16,"path":"sprites/collar2/collar2.yy",},
+    {"name":"heart","order":10,"path":"sprites/heart/heart.yy",},
     {"name":"Jingle","order":3,"path":"sprites/Jingle/Jingle.yy",},
     {"name":"JornalCidadeMARLEY","order":4,"path":"sprites/JornalCidadeMARLEY/JornalCidadeMARLEY.yy",},
     {"name":"Laudo","order":5,"path":"sprites/Laudo/Laudo.yy",},
