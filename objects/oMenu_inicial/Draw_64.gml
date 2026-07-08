@@ -1,57 +1,26 @@
+var _largura = display_get_gui_width();
+var _altura = display_get_gui_height();
 
-var _ex = device_mouse_x_to_gui(0);
-var _ey = device_mouse_y_to_gui(0);
+// Definição do espaçamento (Aumente o valor abaixo se quiser afastar ainda mais)
+var _espacamento = 15; 
+var _y_inicial = _altura / 2; 
 
-draw_set_font(fmenu_inicial);
 draw_set_halign(fa_center);
-draw_set_halign(fa_middle);
+draw_set_valign(fa_middle);
 
-var tam_menu = array_length(menu_inicial);
-for(var i = 0; i < tam_menu; i++)
-{
-var _wgui = display_get_gui_width()
-var _hgui = display_get_gui_height()
+var _qtd_opcoes = array_length(opcoes);
 
-var _hstr = string_height("I");
-var _wstr = string_width(menu_inicial[i]);
-
-var x1 = _wgui/2 - _wstr / 2;
-var y1 = _hgui/2 - _hstr / 2 + _hstr * i;
-
-var x2 = _wgui/2 + _wstr / 2;
-var y2 = _hgui/2 + _hstr / 2 + _hstr * i;
-
-	if(point_in_rectangle(_ex,_ey,x1,y1,x2,y2))
-	{
-		esc[i] = lerp(esc[i],1.4, 0.15);
-		if(mouse_check_button_pressed(mb_left)){
-			switch menu_inicial[i]
-			{
-				case menu_inicial[0]:
-					room_goto(roomjogo);
-					break;
-				case menu_inicial[1]:
-					room_goto(roomsobre);
-					break;
-				case menu_inicial[2]:
-					room_goto(roommuseu);
-					break;
-				case menu_inicial[3]:
-					game_end();
-					break;
-			}
-	
-		}
-	
-	}
-	else
-	{
-		esc[i] = lerp(esc[i],1, 0.15);     
-	}
-
-	draw_text_transformed(_wgui/2, _hgui/2 + _hstr * i, menu_inicial[i],esc[i], esc[i], 0 );
+for (var i = 0; i < _qtd_opcoes; i++) {
+    var _pos_y = _y_inicial + (i * _espacamento);
+    
+    if (i == index_selecionado) {
+        draw_set_color(c_aqua);
+        draw_text_transformed(_largura / 2, _pos_y, opcoes[i], 1.2, 1.2, 0);
+    } else {
+        draw_set_color(c_white);
+        draw_text_transformed(_largura / 2, _pos_y, opcoes[i], 1, 1, 0);
+    }
 }
 
-	draw_set_font(-1);
-draw_set_halign(-1);
-draw_set_halign(-1);
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
