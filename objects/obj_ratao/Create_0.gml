@@ -79,7 +79,7 @@ estado_passeando = function(){
 
 // 3. O estado de Perseguição com IA de Desvio de Parede
 estado_persegue = function(){
-    sprite = spr_ratao;
+    sprite = spr_ratao_run;
     
     if (instance_exists(obj_player)) {
         alvo = obj_player; // Foco cravado no jogador

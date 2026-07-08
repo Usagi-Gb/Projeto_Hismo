@@ -117,7 +117,7 @@ estado_prepara_ataque = function(){
 	velh = 0;
 	velv = 0;
 	
-	image_blend = make_color_hsv(255, sat * 255, 255);
+	image_blend = make_color_hsv(140, sat * 255, 255);
 	
 	if(sat > 1){
 		estado = estado_ataque;

@@ -10,8 +10,8 @@
   "name":"obj_menu_sobre",
   "overriddenProperties":[],
   "parent":{
-    "name":"Hismo atualizações",
-    "path":"Hismo atualizações.yyp",
+    "name":"Controladores",
+    "path":"folders/Objects/Controladores.yy",
   },
   "parentObjectId":null,
   "persistent":false,
