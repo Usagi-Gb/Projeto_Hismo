@@ -79,7 +79,7 @@ estado_passeando = function(){
 
 // 3. O estado de Perseguição com IA de Desvio de Parede
 estado_persegue = function(){
-    sprite = spr_lizard_run;
+    sprite = spr_ratao;
     
     if (instance_exists(obj_player)) {
         alvo = obj_player; // Foco cravado no jogador
@@ -101,7 +101,7 @@ estado_persegue = function(){
         var _dist = point_distance(x, y, alvo.x, alvo.y);
         
         // Substituímos o "larg_visao" por um número de pixels (ex: 40 pixels de distância para preparar o pulo/bomba)
-        if (_dist < 40) { 
+        if (_dist < 180) { 
             estado = estado_prepara_ataque;
         }
     }
@@ -116,7 +116,7 @@ estado_prepara_ataque = function(){
 	}
 	image_speed = sat;
 	
-	sprite = spr_lizard_idle;
+	sprite = spr_ratao;
 	velh = 0;
 	velv = 0;
 	
@@ -142,7 +142,7 @@ estado_ataque = function(){
         var _bomba = instance_create_layer(x, y, "Instances", obj_bomba);
         
         // Joga a bomba na direção que o player estava
-        _bomba.speed = 5; // Força do arremesso
+        _bomba.speed = 8; // Força do arremesso
         _bomba.direction = alvo_dir; 
         
         jogou_bomba = true;

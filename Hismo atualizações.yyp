@@ -96,6 +96,8 @@
     {"id":{"name":"spr_bomba_acesa","path":"sprites/spr_bomba_acesa/spr_bomba_acesa.yy",},},
     {"id":{"name":"spr_bomba_apagada","path":"sprites/spr_bomba_apagada/spr_bomba_apagada.yy",},},
     {"id":{"name":"spr_bomba_quase","path":"sprites/spr_bomba_quase/spr_bomba_quase.yy",},},
+    {"id":{"name":"spr_booby_idle","path":"sprites/spr_booby_idle/spr_booby_idle.yy",},},
+    {"id":{"name":"spr_booby_run","path":"sprites/spr_booby_run/spr_booby_run.yy",},},
     {"id":{"name":"spr_cadeado","path":"sprites/spr_cadeado/spr_cadeado.yy",},},
     {"id":{"name":"spr_cajado_axe","path":"sprites/spr_cajado_axe/spr_cajado_axe.yy",},},
     {"id":{"name":"spr_coracao_hit","path":"sprites/spr_coracao_hit/spr_coracao_hit.yy",},},

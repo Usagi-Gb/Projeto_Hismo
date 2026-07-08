@@ -58,7 +58,7 @@ desenha_sombra = function(){
 
 // 1. O inimigo não descansa mais se o jogador estiver vivo
 estado_parado = function(){
-    sprite = spr_lizard_idle;
+    sprite = spr_booby_idle;
     velh = 0;
     velv = 0;
     
@@ -76,7 +76,7 @@ estado_passeando = function(){
 
 // 3. O estado de Perseguição com IA de Desvio de Parede
 estado_persegue = function(){
-    sprite = spr_lizard_run;
+    sprite = spr_booby_run;
     
     if (instance_exists(obj_player)) {
         alvo = obj_player; // Foco cravado no jogador
@@ -113,7 +113,7 @@ estado_prepara_ataque = function(){
 	}
 	image_speed = sat;
 	
-	sprite = spr_lizard_idle;
+	sprite = spr_booby_idle;
 	velh = 0;
 	velv = 0;
 	

@@ -65,6 +65,7 @@
     {"name":"spr_bomba_acesa","order":3,"path":"sprites/spr_bomba_acesa/spr_bomba_acesa.yy",},
     {"name":"spr_bomba_apagada","order":6,"path":"sprites/spr_bomba_apagada/spr_bomba_apagada.yy",},
     {"name":"spr_bomba_quase","order":5,"path":"sprites/spr_bomba_quase/spr_bomba_quase.yy",},
+    {"name":"spr_booby_run","order":1,"path":"sprites/spr_booby_run/spr_booby_run.yy",},
     {"name":"spr_cadeado","order":18,"path":"sprites/spr_cadeado/spr_cadeado.yy",},
     {"name":"spr_cajado_axe","order":2,"path":"sprites/spr_cajado_axe/spr_cajado_axe.yy",},
     {"name":"spr_coracao_hit","order":5,"path":"sprites/spr_coracao_hit/spr_coracao_hit.yy",},
