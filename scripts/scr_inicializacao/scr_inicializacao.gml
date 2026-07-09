@@ -158,8 +158,8 @@ global.conquistas = [
     },
     {
         nome: "Colar",
-        desc_bloqueado: "...",
-        desc_desbloqueado: "Descrição do Colar...",
+        desc_bloqueado: "derrote um MC Sapão",
+        desc_desbloqueado: "Apenas os maioral vão pra arte” como o MC Sapão tem um jeito com as palavras",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: collar2,
         desbloqueado: false
