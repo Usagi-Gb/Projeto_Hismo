@@ -62,7 +62,7 @@ global.conquistas = [
     },
     {
         nome: "Jornal Marley",
-        desc_bloqueado: "Derrote",
+        desc_bloqueado: "Derrote 3 Boob Marley",
         desc_desbloqueado: "... Durante sua 4° turne pelo Brasil, o artista audiovisual Boob Marley teve seu historico primeiro \nproblema tecnico durante o show na Bahia quando um de seus fas conseguiu entrar no camarin de Boob Marley durante o show.\n Boob Marley, em sua metodologia peculiar, decidiu resolver o problema pessoalmente e teve que interromper seu proprio show.",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: JornalCidadeMARLEY,
