@@ -1,10 +1,13 @@
+// Trava: se a HQ estiver a passar, não desenha os corações!
+if (instance_exists(obj_final_hq)) exit;
+
 if (!game_over) {
     draw_set_alpha(1.0);
     draw_set_color(c_white);
     
-    var _x_inicial = 20; // Posição X do primeiro coração
-    var _y_inicial = 20; // Posição Y (altura) dos corações no topo da tela
-    var _espacamento = 35; // Distância entre cada coração
+    var _x_inicial = 20;
+    var _y_inicial = 20;
+    var _espacamento = 35;
 
     for (var i = 0; i < vida_max; i++) {
         var _pos_x = _x_inicial + (i * _espacamento);
@@ -16,7 +19,6 @@ if (!game_over) {
         }
     }
 }
-
 else {
     if (surface_exists(gameover_surf)) {
         draw_surface(gameover_surf, 0, 0);
@@ -25,35 +27,33 @@ else {
     var _largura = display_get_gui_width();
     var _altura = display_get_gui_height();
     
-    draw_set_alpha(0.8); // Fundo bem escuro
+    draw_set_alpha(0.8);
     draw_set_color(c_black);
     draw_rectangle(0, 0, _largura, _altura, false);
-    draw_set_alpha(1.0); // Reseta a transparência para os textos
+    draw_set_alpha(1.0);
 
-    // Configurações de alinhamento para o centro
     draw_set_halign(fa_center);
     draw_set_valign(fa_middle);
     
-    // Título
-    draw_set_color(c_red);
-    draw_text_transformed(_largura / 2, _altura / 2 - 80, "GAME OVER", 2, 2, 0); 
+    // Titulo Dinamico baseado na vitoria
+    var _texto_titulo = vitoria ? "VITÓRIA!" : "GAME OVER";
+    var _cor_titulo = vitoria ? c_yellow : c_red;
     
-    // Título das Conquistas
+    draw_set_color(_cor_titulo);
+    draw_text_transformed(_largura / 2, _altura / 2 - 80, _texto_titulo, 2, 2, 0);
+    
     draw_set_color(c_yellow);
     draw_text(_largura / 2, _altura / 2 - 20, "Conquistas Obtidas:");
     draw_set_color(c_white);
-	
-    // Quantos itens/troféus o jogador ganhou nessa partida
+    
     var _tam = array_length(lista_conquistas);
-
     for (var i = 0; i < _tam; i++) {
         draw_text(_largura / 2, _altura / 2 + 15 + (i * 25), "- " + lista_conquistas[i]);
     }
-    draw_set_color(c_gray);
-    draw_text(_largura / 2, _altura / 2 + (30 * _tam), "Aperte ESPACO para voltar ao menu");
-    // Reseta o alinhamento para não estragar outras interfaces
+    
+    draw_set_color(c_white);
+    draw_text(_largura / 2, _altura / 2 + 140, "Aperte ESPACO para voltar ao menu");
+    
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);
-    draw_set_color(c_white);
-	salvar_jogo();
-} 
+}

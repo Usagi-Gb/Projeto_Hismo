@@ -1,107 +1,38 @@
-if (vida <= 0 && !game_over) {
+// Lógica de Game Over e Vitória (Salva e mostra conquistas)
+if ((vida <= 0 || vitoria) && !game_over) {
     game_over = true;
     lista_conquistas = [];
     
-    // Le a onda correta mesmo na sala do boss
     var _ondas = global.ondas_atuais;
     if (instance_exists(obj_controlador_waves)) {
         _ondas = obj_controlador_waves.current_wave;
     }
     ondas_alcancadas = _ondas;
     
-    array_push(lista_conquistas, "Ondas Concluidas: " + string(_ondas - 1));
+    // CORRIGIDO: Removido o "- 1" para mostrar a onda correta
+    array_push(lista_conquistas, "Ondas Alcançadas: " + string(_ondas));
     array_push(lista_conquistas, "Inimigos Mortos: " + string(global.inimigos_mortos));
     
-    if (_ondas >= 5) {
-        array_push(lista_conquistas, "Trofeu: VETERANO DE GUERRA!");
-    }
-    if (global.inimigos_mortos >= 20) {
-        array_push(lista_conquistas, "Trofeu: EXTERMINADOR DE MONSTROS!");
-    }
-    if (global.ritmos_acertados >= 15) {
-        array_push(lista_conquistas, "Trofeu: MESTRE DO RITMO!");
-    }
+    if (_ondas >= 5) array_push(lista_conquistas, "Trofeu: VETERANO DE GUERRA!");
+    if (global.inimigos_mortos >= 20) array_push(lista_conquistas, "Trofeu: EXTERMINADOR DE MONSTROS!");
+    if (global.ritmos_acertados >= 15) array_push(lista_conquistas, "Trofeu: MESTRE DO RITMO!");
     
-    //DESBLOQUEIOS DO MUSEU
     var _tam_museu = array_length(global.conquistas);
-
-    if (global.boobs_mortos >= 1) {
+    
+    if (global.boobs_mortos >= 10) {
         for (var i = 0; i < _tam_museu; i++) {
             if (global.conquistas[i].nome == "Bandana" && !global.conquistas[i].desbloqueado) {
-                global.conquistas[i].desbloqueado = true; 
+                global.conquistas[i].desbloqueado = true;
                 array_push(lista_conquistas, "Item Secreto Revelado: BANDANA!"); 
                 break;
             }
         }
     }
-	if (global.boobs_mortos >= 3) {
-        for (var i = 0; i < _tam_museu; i++) {
-            if (global.conquistas[i].nome == "Jornal Marley" && !global.conquistas[i].desbloqueado) {
-                global.conquistas[i].desbloqueado = true; 
-                array_push(lista_conquistas, "Item Secreto Revelado: Jornal Marley"); 
-                break;
-            }
-        }
-    }
-	 if (global.inimigos_mortos >= 1) {
-        for (var i = 0; i < _tam_museu; i++) {
-            if (global.conquistas[i].nome == "Clave de Sol" && !global.conquistas[i].desbloqueado) {
-                global.conquistas[i].desbloqueado = true; 
-                array_push(lista_conquistas, "Item Secreto Revelado: Clave de Sol!"); 
-                break;
-            }
-        }
-    }
-	if (global.ondas_maximas >= 1) {
-        for (var i = 0; i < _tam_museu; i++) {
-            if (global.conquistas[i].nome == "Clave de Fa" && !global.conquistas[i].desbloqueado) {
-                global.conquistas[i].desbloqueado = true; 
-                array_push(lista_conquistas, "Item Secreto Revelado: Clave de Fa!"); 
-                break;
-            }
-        }
-    }
-	if (global.inimigos_mortos >= 10) {
-        for (var i = 0; i < _tam_museu; i++) {
-            if (global.conquistas[i].nome == "Cupcake" && !global.conquistas[i].desbloqueado) {
-                global.conquistas[i].desbloqueado = true; 
-                array_push(lista_conquistas, "Item Secreto Revelado: Cupcake!"); 
-                break;
-            }
-        }
-    }
-	if (global.ondas_maximas >= 1 && global.inimigos_mortos >= 1) {
-        for (var i = 0; i < _tam_museu; i++) {
-            if (global.conquistas[i].nome == "Acidentes" && !global.conquistas[i].desbloqueado) {
-                global.conquistas[i].desbloqueado = true; 
-                array_push(lista_conquistas, "Item Secreto Revelado: Acidentes!"); 
-                break;
-            }
-        }
-    }
-	if (global.ondas_maximas >= 1 && global.inimigos_mortos >= 1) {
-        for (var i = 0; i < _tam_museu; i++) {
-            if (global.conquistas[i].nome == "Jingle" && !global.conquistas[i].desbloqueado) {
-                global.conquistas[i].desbloqueado = true; 
-                array_push(lista_conquistas, "Item Secreto Revelado: Jingle!"); 
-                break;
-            }
-        }
-    }
-	 if (global.ratos_mortos >= 1) {
-        for (var i = 0; i < _tam_museu; i++) {
-            if (global.conquistas[i].nome == "Bomba Bombastic" && !global.conquistas[i].desbloqueado) {
-                global.conquistas[i].desbloqueado = true; 
-                array_push(lista_conquistas, "Item Secreto Revelado: Bomba Bombastic!"); 
-                break;
-            }
-        }
-    }
 
-    if (global.sapos_mortos >= 1) {
+    if (global.sapos_mortos >= 4) {
         for (var i = 0; i < _tam_museu; i++) {
             if (global.conquistas[i].nome == "Colar" && !global.conquistas[i].desbloqueado) {
-                global.conquistas[i].desbloqueado = true; 
+                global.conquistas[i].desbloqueado = true;
                 array_push(lista_conquistas, "Item Secreto Revelado: COLAR!"); 
                 break;
             }
@@ -111,6 +42,9 @@ if (vida <= 0 && !game_over) {
     if (array_length(lista_conquistas) <= 2) {
          array_push(lista_conquistas, "Dica: Tente sobreviver mais tempo!");
     }
+
+    // Salva o progresso
+    salvar_jogo();
 
     var _width = surface_get_width(application_surface);
     var _height = surface_get_height(application_surface);
@@ -130,6 +64,7 @@ if (game_over) {
     }
     exit;
 }
+
 var up = keyboard_check(ord("W"));
 var down = keyboard_check(ord("S"));
 var left = keyboard_check(ord("A"));
@@ -141,10 +76,11 @@ if (dash_cd_timer > 0) dash_cd_timer--;
 
 if (ritmo_timer > 0) {
     ritmo_timer--;
-    image_blend = c_aqua; 
+    image_blend = c_aqua;
 } else {
-    if (!is_dashing) image_blend = c_white; 
+    if (!is_dashing) image_blend = c_white;
 }
+
 if (_tecla_dash && dash_cd_timer <= 0 && !is_dashing && _movendo) {
     is_dashing = true;
     dash_timer = dash_duration;
@@ -155,7 +91,7 @@ if (_tecla_dash && dash_cd_timer <= 0 && !is_dashing && _movendo) {
 if (is_dashing) {
     vel = dash_speed; 
     move_dir = dash_dir;
-    image_blend = c_gray; 
+    image_blend = c_gray;
     
     if (dash_timer % 2 == 0) {
         var _rastro = instance_create_layer(x, y, "Instances", obj_rastro_dash);
@@ -173,10 +109,10 @@ if (is_dashing) {
     if (_movendo) {
         move_dir = point_direction(0, 0, (right - left), (down - up));
         vel = max_vel;
-		sprite_index = spr_lucas_run;
+        sprite_index = spr_lucas_run;
     } else {
-        vel = lerp(vel, 0, 0.1); 
-		sprite_index = spr_lucas_idle
+        vel = lerp(vel, 0, 0.1);
+        sprite_index = spr_lucas_idle;
     }
 }
 

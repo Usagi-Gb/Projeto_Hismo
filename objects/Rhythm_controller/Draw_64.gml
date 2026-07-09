@@ -1,3 +1,4 @@
+if (instance_exists(obj_final_hq)) exit;
 // Calcular o quão perto as barras estão do coração
 //Multiplicar a distância invertida atrai as barras até ao centro.
 var current_dist = max_dist * (1.0 - beat_fraction);
