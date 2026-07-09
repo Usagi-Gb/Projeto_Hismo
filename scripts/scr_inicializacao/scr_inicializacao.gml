@@ -37,6 +37,7 @@ global.conquistas = [
         spr_desbloqueado: Acidentes,
         desbloqueado: true
     },
+    
     {
         nome: "Clave de Fá",
         desc_bloqueado: "...",
@@ -63,15 +64,23 @@ global.conquistas = [
     },
     {
         nome: "Jornal Marley",
-        desc_bloqueado: "...",
-        desc_desbloqueado: "Descrição do Jornal Cidade MARLEY...",
+        desc_bloqueado: "Sofra uma derrota para um Boob Marley",
+        desc_desbloqueado: "... Durante sua 4° turnê pelo Brasil, o artista audiovisual Boob Marley teve seu primeiro problema técnico durante o show na Bahia quando um de seus fãs conseguiu entrar no camarin de Boob Marley durante o show. Boob Marley, em sua metodologia peculiar, decidiu resolver o problema pessoalmente e teve que interromper seu próprio show.",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: JornalCidadeMARLEY,
-        desbloqueado: true
+        desbloqueado: false
     },
+	{ 
+		nome: "Bomba Bombastic",
+        desc_bloqueado: "Abata um MC Bombastic",
+        desc_desbloqueado: "O mais famoso MR Bombastic bombou em todos os jeitos. Sua música? Apenas bombas. Sua fama? Explosiva. Sua vida? Apenas uma explosão rápida infelizmente…",
+        spr_bloqueado: spr_cadeado,
+        spr_desbloqueado: spr_bomba_quase,
+        desbloqueado: true,
+	},
     {
         nome: "Tom da Floresta",
-        desc_bloqueado: "...",
+        desc_bloqueado: "Abata o Chefe Final",
         desc_desbloqueado: "Descrição do Tom da Floresta...",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: Tom_da_Floresta,
@@ -127,16 +136,16 @@ global.conquistas = [
     },
     {
         nome: "Ukulele",
-        desc_bloqueado: "...",
-        desc_desbloqueado: "Descrição do Ukulele...",
+        desc_bloqueado: "Equipe o Ukulele durante a Gameplay",
+        desc_desbloqueado: "Tenho ",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: ukulele,
         desbloqueado: false
     },
     {
         nome: "Bandana",
-        desc_bloqueado: "...",
-        desc_desbloqueado: "Descrição da Bandana...",
+        desc_bloqueado: "Derrote 10 Boob Marleys",
+        desc_desbloqueado: "O Boob Marley permitiu que eu pegasse sua bandana como um presente durante o show por eu ser seu maior fã.",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: bandana,
         desbloqueado: false
@@ -151,10 +160,17 @@ global.conquistas = [
     },
     {
         nome: "Colar",
-        desc_bloqueado: "...",
-        desc_desbloqueado: "Descrição do Colar...",
+        desc_bloqueado: "derrote um MC Sapão",
+        desc_desbloqueado: "Apenas os maioral vão pra arte” como o MC Sapão tem um jeito com as palavras",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: collar2,
         desbloqueado: false
     },
+	{
+		nome: "Cupcake",
+		desc_bloqueado: "Consuma um cupcake durante Gameplay",
+		desc_desbloqueado: "Este Cupcake é especial, ele é o melhor Cupcake que você poderia comer em sua vida, Ele te revigora no Físico E no espírito.",
+		spr_bloqueado: spr_cadeado,
+		spr_desbloqueado: CupC
+	},
 ];
