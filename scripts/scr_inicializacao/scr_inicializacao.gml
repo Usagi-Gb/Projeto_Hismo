@@ -27,7 +27,7 @@ global.conquistas = [
         desc_desbloqueado: "Os acidentes são parte vital de muitas sonoridades de qualquer música que as utilize, sendo as mais comuns o sustenido e o Bmol. *Partitura com 3 notas, Sol Bmol, Sol, Sol#.",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: AcidenteL_,
-        desbloqueado: true
+        desbloqueado: false
     },
 	{
         nome: "Crescente",
@@ -35,24 +35,23 @@ global.conquistas = [
         desc_desbloqueado: "No processo de escritura você pode conectar duas notas para criar ou uma prolongação ou, neste caso, uma dinâmica de em uma só leva crescer ou decrescer até a nota alvo.",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: Acidentes,
-        desbloqueado: true
+        desbloqueado: false
     },
-    
-    {
-        nome: "Clave de Fá",
-        desc_bloqueado: "...",
-        desc_desbloqueado: "Descrição da Clave de Fá...",
-        spr_bloqueado: spr_cadeado,
-        spr_desbloqueado: Clave_Fa,
-        desbloqueado: true
-    },
-    {
+	{
         nome: "Clave de Sol",
-        desc_bloqueado: "...",
-        desc_desbloqueado: "Descrição da Clave de Sol...",
+        desc_bloqueado: "Recompensa de primeira wave",
+        desc_desbloqueado: "Nesta clave a nota sol estará na segunda linha.",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: clava_de_sol,
-        desbloqueado: true
+        desbloqueado: false
+    },
+    {
+        nome: "Clave de Fá",
+        desc_bloqueado: "Recompensa de primeiro abate",
+        desc_desbloqueado: "...já nesta clave terá um sol no espaço sobre a quarta linha.",
+        spr_bloqueado: spr_cadeado,
+        spr_desbloqueado: Clave_Fa,
+        desbloqueado: false
     },
     {
         nome: "Jingle",
