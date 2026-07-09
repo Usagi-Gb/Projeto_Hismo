@@ -2,7 +2,7 @@
 if ((vida <= 0 || vitoria) && !game_over) {
     game_over = true;
     lista_conquistas = [];
-    
+}
     var _ondas = global.ondas_atuais;
     if (instance_exists(obj_controlador_waves)) {
         _ondas = obj_controlador_waves.current_wave;
@@ -18,8 +18,41 @@ if ((vida <= 0 || vitoria) && !game_over) {
     if (global.ritmos_acertados >= 15) array_push(lista_conquistas, "Trofeu: MESTRE DO RITMO!");
     
     var _tam_museu = array_length(global.conquistas);
+
     
     if (global.boobs_mortos >= 10) {
+	
+if (room == room_boss) {
+  
+    for (var i = 0; i < _tam_museu; i++) {
+        if (global.conquistas[i].nome == "Tom da Floresta" && !global.conquistas[i].desbloqueado) {
+            global.conquistas[i].desbloqueado = true; 
+            array_push(lista_conquistas, "Item Secreto Revelado: Tom da Floresta!"); 
+            break;
+        }
+    }
+}
+if (room == roomsobre) {
+  
+    for (var i = 0; i < _tam_museu; i++) {
+        if (global.conquistas[i].nome == "Violao" && !global.conquistas[i].desbloqueado) {
+            global.conquistas[i].desbloqueado = true; 
+            array_push(lista_conquistas, "Item Secreto Revelado: Violao!"); 
+            break;
+        }
+    }
+}
+if (room == roomsobre) {
+  
+    for (var i = 0; i < _tam_museu; i++) {
+        if (global.conquistas[i].nome == "Ukulele" && !global.conquistas[i].desbloqueado) {
+            global.conquistas[i].desbloqueado = true; 
+            array_push(lista_conquistas, "Item Secreto Revelado: Ukulele!"); 
+            break;
+        }
+    }
+}
+    if (global.boobs_mortos >= 1) {
         for (var i = 0; i < _tam_museu; i++) {
             if (global.conquistas[i].nome == "Bandana" && !global.conquistas[i].desbloqueado) {
                 global.conquistas[i].desbloqueado = true;

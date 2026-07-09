@@ -44,6 +44,7 @@
     {"name":"obj_sapo","order":3,"path":"objects/obj_sapo/obj_sapo.yy",},
     {"name":"obj_tiro","order":1,"path":"objects/obj_tiro/obj_tiro.yy",},
     {"name":"oMenu_inicial","order":4,"path":"objects/oMenu_inicial/oMenu_inicial.yy",},
+    {"name":"Rhythm_controller_boss","order":6,"path":"objects/Rhythm_controller_boss/Rhythm_controller_boss.yy",},
     {"name":"Rhythm_controller","order":3,"path":"objects/Rhythm_controller/Rhythm_controller.yy",},
     {"name":"room_boss","order":4,"path":"rooms/room_boss/room_boss.yy",},
     {"name":"roomjogo","order":2,"path":"rooms/roomjogo/roomjogo.yy",},

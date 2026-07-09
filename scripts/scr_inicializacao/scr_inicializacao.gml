@@ -4,6 +4,7 @@ global.sapos_mortos = 0;
 global.ratos_mortos = 0;
 global.ritmos_acertados = 0;
 global.ondas_maximas = 0;
+global.chefe_final_morto = false;
 global.conquistas = [
     {
         nome: "Laudo",
@@ -79,8 +80,8 @@ global.conquistas = [
 	},
     {
         nome: "Tom da Floresta",
-        desc_bloqueado: "Abata o Chefe Final",
-        desc_desbloqueado: "O tom que tanto o perseguiu foi apenas uma unica nota. \n\n\n Do´",
+        desc_bloqueado: "Deslumbre o chefe final",
+        desc_desbloqueado: "\n\n O tom que tanto o perseguiu foi apenas uma unica nota. \n\n\n Do´",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: Tom_da_Floresta,
         desbloqueado: false
@@ -94,8 +95,8 @@ global.conquistas = [
         desbloqueado: true
     },
     {
-        nome: "Violão do Museu",
-        desc_bloqueado: "Recompensa por o usar durante Gameplay",
+        nome: "Violao",
+        desc_bloqueado: "Recompensa por abrir a pagina sobre",
         desc_desbloqueado: "",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: museu_viol_o,
@@ -103,8 +104,8 @@ global.conquistas = [
     },
     {
         nome: "Ukulele",
-        desc_bloqueado: "Equipe o Ukulele durante a Gameplay",
-        desc_desbloqueado: "Tenho ",
+        desc_bloqueado: "Recompensa por abrir a pagina sobre",
+        desc_desbloqueado: "",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: ukulele,
         desbloqueado: false
@@ -120,10 +121,10 @@ global.conquistas = [
     {
         nome: "Arco",
         desc_bloqueado: "...",
-        desc_desbloqueado: "Se um dia eu já tive um violino, esse violino ",
+        desc_desbloqueado: "",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: bow,
-        desbloqueado: false
+        desbloqueado: true
     },
     {
         nome: "Colar",
@@ -150,6 +151,7 @@ function salvar_jogo() {
         sapos: global.sapos_mortos,
         ratos: global.ratos_mortos,
         ritmos: global.ritmos_acertados,
+		CFM: global.chefe_final_morto,
         conquistas_status: [] 
     };
 
@@ -177,6 +179,7 @@ function carregar_jogo() {
         global.sapos_mortos = _dados_save.sapos;
         global.ratos_mortos = _dados_save.ratos;
         global.ritmos_acertados = _dados_save.ritmos;
+		global.chefe_final_morto = _dados_save.CFM;
 
         var _tam = array_length(global.conquistas);
         for (var i = 0; i < _tam; i++) {
@@ -197,12 +200,13 @@ function deletar_save() {
     global.sapos_mortos = 0;
     global.ratos_mortos = 0;
     global.ritmos_acertados = 0;
+	global.chefe_final_morto = false;
     
     var _tam = array_length(global.conquistas);
     for (var i = 0; i < _tam; i++) {
         var _nome = global.conquistas[i].nome;
         
-        if (_nome == "Laudo" || _nome == "Partitura" || _nome == "Oito Notas") {
+        if (_nome == "Laudo" || _nome == "Partitura" || _nome == "Oito Notas" || _nome == "Arco") {
             global.conquistas[i].desbloqueado = true;
         } else {
             global.conquistas[i].desbloqueado = false;

@@ -71,6 +71,7 @@
     {"id":{"name":"obj_tiro_axe","path":"objects/obj_tiro_axe/obj_tiro_axe.yy",},},
     {"id":{"name":"obj_tiro","path":"objects/obj_tiro/obj_tiro.yy",},},
     {"id":{"name":"oMenu_inicial","path":"objects/oMenu_inicial/oMenu_inicial.yy",},},
+    {"id":{"name":"Rhythm_controller_boss","path":"objects/Rhythm_controller_boss/Rhythm_controller_boss.yy",},},
     {"id":{"name":"Rhythm_controller","path":"objects/Rhythm_controller/Rhythm_controller.yy",},},
     {"id":{"name":"room_boss","path":"rooms/room_boss/room_boss.yy",},},
     {"id":{"name":"roominicial","path":"rooms/roominicial/roominicial.yy",},},

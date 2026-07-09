@@ -1,4 +1,5 @@
 if (vida_atual <= 0) {
+
     // A trava garante que a HQ só seja criada 1 vez
     if (estado != estado_morto) {
         estado = estado_morto;
@@ -6,6 +7,12 @@ if (vida_atual <= 0) {
         instance_create_layer(0, 0, "Instances", obj_final_hq);
     }
     exit; 
+
+	global.chefe_final_morto = true;
+	global.player_vida_atual = 0;
+    estado = estado_morto;
+    room_goto(roominicial); 
+    exit;
 }
 
 if (estado != estado_morto) {
