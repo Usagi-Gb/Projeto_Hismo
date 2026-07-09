@@ -22,10 +22,10 @@
     {"$GMFolder":"","%Name":"Armas","folderPath":"folders/Sprites/Armas.yy","name":"Armas","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Inimigos","folderPath":"folders/Sprites/Inimigos.yy","name":"Inimigos","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Booby","folderPath":"folders/Sprites/Inimigos/Booby.yy","name":"Booby","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Boss","folderPath":"folders/Sprites/Inimigos/Boss.yy","name":"Boss","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Lizard","folderPath":"folders/Sprites/Inimigos/Lizard.yy","name":"Lizard","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Perereca","folderPath":"folders/Sprites/Inimigos/Perereca.yy","name":"Perereca","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Ratão","folderPath":"folders/Sprites/Inimigos/Ratão.yy","name":"Ratão","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Boss","folderPath":"folders/Sprites/Inimigos/Boss.yy","name":"Boss","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Museu","folderPath":"folders/Sprites/Museu.yy","name":"Museu","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Player","folderPath":"folders/Sprites/Player.yy","name":"Player","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Projeteis","folderPath":"folders/Sprites/Projeteis.yy","name":"Projeteis","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -39,7 +39,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2026.0.0.15",
+    "IDEVersion":"2024.14.4.222",
   },
   "name":"Hismo atualizações",
   "resources":[

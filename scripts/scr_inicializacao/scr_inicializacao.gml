@@ -1,4 +1,3 @@
-// Declaramos aqui para o jogo nunca dar erro de "not set before reading"
 global.inimigos_mortos = 0;
 global.boobs_mortos = 0;
 global.sapos_mortos = 0;
@@ -16,15 +15,15 @@ global.conquistas = [
     {
         nome: "Partitura",
         desc_bloqueado: "...",
-        desc_desbloqueado: "O instrumento que tocará a partitura escolhe como a partitura será escrita. O meio de notar a onde está quais notas é chamado de *CLAVE*.",
+        desc_desbloqueado: "O instrumento que tocará a partitura escolhe como a partitura será escrita.\n O meio de notar a onde está quais notas é chamado de *CLAVE*.",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: partitura,
         desbloqueado: true
     },
-	{
+{
         nome: "Acidentes",
-        desc_bloqueado: "Recompensa por desbloquear *Jingle* e ambas partituras apenas Sol.",
-        desc_desbloqueado: "Os acidentes são parte vital de muitas sonoridades de qualquer música que as utilize, sendo as mais comuns o sustenido e o Bmol. *Partitura com 3 notas, Sol Bmol, Sol, Sol#.",
+        desc_bloqueado: "Recompensa por desbloquear e ambas partituras apenas Sol.",
+        desc_desbloqueado: "Os acidentes são parte vital de muitas sonoridades de qualquer música que as utilize,\n sendo as mais comuns o sustenido e o Bmol.\n A partitura acima contém, Sol Bmol, Sol puro e Sol sustenido.",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: AcidenteL_,
         desbloqueado: false
@@ -32,7 +31,7 @@ global.conquistas = [
 	{
         nome: "Crescente",
         desc_bloqueado: "Bloqueado: Derrote o MC Perereca.",
-        desc_desbloqueado: "No processo de escritura você pode conectar duas notas para criar ou uma prolongação ou, neste caso, uma dinâmica de em uma só leva crescer ou decrescer até a nota alvo.",
+        desc_desbloqueado: "No processo de escritura você pode conectar duas notas para criar ou uma prolongação\n ou, neste caso, uma dinâmica de em uma só leva crescer ou decrescer até a nota alvo.",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: Acidentes,
         desbloqueado: false
@@ -64,7 +63,7 @@ global.conquistas = [
     {
         nome: "Jornal Marley",
         desc_bloqueado: "Sofra uma derrota para um Boob Marley",
-        desc_desbloqueado: "... Durante sua 4° turnê pelo Brasil, o artista audiovisual Boob Marley teve seu primeiro problema técnico durante o show na Bahia quando um de seus fãs conseguiu entrar no camarin de Boob Marley durante o show. Boob Marley, em sua metodologia peculiar, decidiu resolver o problema pessoalmente e teve que interromper seu próprio show.",
+        desc_desbloqueado: "... Durante sua 4° turnê pelo Brasil, o artista audiovisual Boob Marley teve seu historico primeiro \nproblema tecnico durante o show na Bahia quando um de seus fãs conseguiu entrar no camarin de Boob Marley durante o show.\n Boob Marley, em sua metodologia peculiar, decidiu resolver o problema pessoalmente e teve que interromper seu proprio show.",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: JornalCidadeMARLEY,
         desbloqueado: false
@@ -72,7 +71,7 @@ global.conquistas = [
 	{ 
 		nome: "Bomba Bombastic",
         desc_bloqueado: "Abata um MC Bombastic",
-        desc_desbloqueado: "O mais famoso MR Bombastic bombou em todos os jeitos. Sua música? Apenas bombas. Sua fama? Explosiva. Sua vida? Apenas uma explosão rápida infelizmente…",
+        desc_desbloqueado: "\nO mais famoso MR Bombastic bombou em todos os jeitos.\n Sua musica? Apenas bombas.\n Sua fama? Explosiva.\n Sua vida? Apenas uma explosão rapida infelizmente…",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: spr_bomba_quase,
         desbloqueado: false,
@@ -80,7 +79,7 @@ global.conquistas = [
     {
         nome: "Tom da Floresta",
         desc_bloqueado: "Abata o Chefe Final",
-        desc_desbloqueado: "Descrição do Tom da Floresta...",
+        desc_desbloqueado: "O tom que tanto o perseguiu foi apenas uma unica nota. \n\n\n Do´",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: Tom_da_Floresta,
         desbloqueado: false
@@ -88,18 +87,10 @@ global.conquistas = [
     {
         nome: "Oito Notas",
         desc_bloqueado: "...",
-        desc_desbloqueado: "O intervalo mais curto frequentemente utilizável",
+        desc_desbloqueado: "O intervalo mais curto frequentemente utilizavel",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: _8_notas,
         desbloqueado: true
-    },
-    {
-        nome: "Flauta",
-        desc_bloqueado: "Recompensa por a usar durante Gameplay",
-        desc_desbloqueado: "",
-        spr_bloqueado: spr_cadeado,
-        spr_desbloqueado: spr_flauta,
-        desbloqueado: false
     },
     {
         nome: "Violão do Museu",
@@ -128,7 +119,7 @@ global.conquistas = [
     {
         nome: "Arco",
         desc_bloqueado: "...",
-        desc_desbloqueado: "Descrição do Arco...",
+        desc_desbloqueado: "Se um dia eu já tive um violino, esse violino ",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: bow,
         desbloqueado: false
