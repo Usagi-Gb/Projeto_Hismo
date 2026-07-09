@@ -55,11 +55,11 @@ global.conquistas = [
     },
     {
         nome: "Jingle",
-        desc_bloqueado: "...",
-        desc_desbloqueado: "Descrição do Jingle...",
+        desc_bloqueado: "Recompensa por desbloquear Ambas as claves",
+        desc_desbloqueado: "",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: Jingle,
-        desbloqueado: true
+        desbloqueado: false
     },
     {
         nome: "Jornal Marley",
@@ -75,7 +75,7 @@ global.conquistas = [
         desc_desbloqueado: "O mais famoso MR Bombastic bombou em todos os jeitos. Sua música? Apenas bombas. Sua fama? Explosiva. Sua vida? Apenas uma explosão rápida infelizmente…",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: spr_bomba_quase,
-        desbloqueado: true,
+        desbloqueado: false,
 	},
     {
         nome: "Tom da Floresta",
@@ -83,52 +83,28 @@ global.conquistas = [
         desc_desbloqueado: "Descrição do Tom da Floresta...",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: Tom_da_Floresta,
-        desbloqueado: true
+        desbloqueado: false
     },
     {
         nome: "Oito Notas",
         desc_bloqueado: "...",
-        desc_desbloqueado: "Descrição das 8 notas...",
+        desc_desbloqueado: "O intervalo mais curto frequentemente utilizável",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: _8_notas,
         desbloqueado: true
     },
     {
-        nome: "Nota Musical 1",
-        desc_bloqueado: "...",
-        desc_desbloqueado: "Descrição da primeira nota...",
-        spr_bloqueado: spr_cadeado,
-        spr_desbloqueado: nota,
-        desbloqueado: true
-    },
-    {
-        nome: "Nota Musical 2",
-        desc_bloqueado: "...",
-        desc_desbloqueado: "Descrição da segunda nota...",
-        spr_bloqueado: spr_cadeado,
-        spr_desbloqueado: nota2,
-        desbloqueado: true
-    },
-    {
         nome: "Flauta",
-        desc_bloqueado: "...",
-        desc_desbloqueado: "Descrição da Flauta...",
+        desc_bloqueado: "Recompensa por a usar durante Gameplay",
+        desc_desbloqueado: "",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: spr_flauta,
-        desbloqueado: true
-    },
-    {
-        nome: "Violão",
-        desc_bloqueado: "...",
-        desc_desbloqueado: "Descrição do Violão...",
-        spr_bloqueado: spr_cadeado,
-        spr_desbloqueado: viol_o,
-        desbloqueado: true
+        desbloqueado: false
     },
     {
         nome: "Violão do Museu",
-        desc_bloqueado: "...",
-        desc_desbloqueado: "Descrição do Violão do Museu...",
+        desc_bloqueado: "Recompensa por o usar durante Gameplay",
+        desc_desbloqueado: "",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: museu_viol_o,
         desbloqueado: false
@@ -170,6 +146,7 @@ global.conquistas = [
 		desc_bloqueado: "Consuma um cupcake durante Gameplay",
 		desc_desbloqueado: "Este Cupcake é especial, ele é o melhor Cupcake que você poderia comer em sua vida, Ele te revigora no Físico E no espírito.",
 		spr_bloqueado: spr_cadeado,
-		spr_desbloqueado: CupC
+		spr_desbloqueado: CupC,
+		desbloqueado: false
 	},
 ];
