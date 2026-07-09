@@ -26,8 +26,8 @@
   },
   "spriteNoExport":true,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"texturegroup1",
+    "path":"texturegroups/texturegroup1",
   },
   "tileAnimationFrames":[
     {"$GMTileAnimation":"","%Name":"boca_lava","frames":[15,16,17,17,],"name":"boca_lava","resourceType":"GMTileAnimation","resourceVersion":"2.0",},

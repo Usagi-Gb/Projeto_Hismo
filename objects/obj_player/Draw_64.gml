@@ -50,7 +50,7 @@ else {
         draw_text(_largura / 2, _altura / 2 + 15 + (i * 25), "- " + lista_conquistas[i]);
     }
     draw_set_color(c_gray);
-    draw_text(_largura / 2, _altura / 2 + 140, "Aperte ESPACO para voltar ao menu");
+    draw_text(_largura / 2, _altura / 2 + (30 * _tam), "Aperte ESPACO para voltar ao menu");
     // Reseta o alinhamento para não estragar outras interfaces
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);

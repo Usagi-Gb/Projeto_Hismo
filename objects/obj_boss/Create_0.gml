@@ -1,4 +1,4 @@
-vida_max = 500; 
+vida_max = 60; 
 vida_atual = vida_max;
 
 estado = "vivo";

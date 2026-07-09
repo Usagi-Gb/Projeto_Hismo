@@ -24,6 +24,16 @@ if (timer_next_wave > 0) {
         else if (!boss_spawnado) {
             boss_spawnado = true;
             enemies_to_spawn = 0; 
+            
+            // Salva os status do player para a transicao
+            if (instance_exists(obj_player)) {
+                global.player_vida_atual = obj_player.vida;
+                if (obj_player.arma != noone) {
+                    global.player_arma_atual = obj_player.arma.object_index;
+                }
+            }
+            global.ondas_atuais = current_wave;
+            
             room_goto(room_boss); 
         }
     }

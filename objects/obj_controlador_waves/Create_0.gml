@@ -1,6 +1,6 @@
 
 current_wave = 1;
-onda_maxima = 6; 
+onda_maxima = 3; 
 boss_spawnado = false;
 enemies_to_spawn = 5;
 spawn_timer = 0;

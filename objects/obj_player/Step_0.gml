@@ -1,17 +1,13 @@
 if (vida <= 0 && !game_over) {
     game_over = true;
+    lista_conquistas = [];
     
-    // Limpa a lista para garantir que começa vazia
-    lista_conquistas = []; 
-
-    // Pega a onda atual antes de congelar o jogo!
-    var _ondas = 0;
+    // Le a onda correta mesmo na sala do boss
+    var _ondas = global.ondas_atuais;
     if (instance_exists(obj_controlador_waves)) {
         _ondas = obj_controlador_waves.current_wave;
-        ondas_alcancadas = _ondas; // Atualiza a variável original por segurança
-		if (ondas_alcancadas-1 > global.ondas_maximas) {global.ondas_maximas = ondas_alcancadas}
-		else {};
     }
+    ondas_alcancadas = _ondas;
     
     array_push(lista_conquistas, "Ondas Concluidas: " + string(_ondas - 1));
     array_push(lista_conquistas, "Inimigos Mortos: " + string(global.inimigos_mortos));

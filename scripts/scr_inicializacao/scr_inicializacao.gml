@@ -209,6 +209,7 @@ function deletar_save() {
         }
     }
 }
-
-
 carregar_jogo();
+global.player_vida_atual = -1;
+global.player_arma_atual = noone;
+global.ondas_atuais = 0;

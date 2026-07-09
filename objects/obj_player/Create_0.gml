@@ -75,3 +75,15 @@ joga_arma = function(){
 		}
 	}
 }
+// Carrega o estado se estiver vindo da Roomjogo
+if (global.player_vida_atual != -1) {
+    vida = global.player_vida_atual;
+    global.player_vida_atual = -1; 
+}
+
+if (global.player_arma_atual != noone) {
+    arma = instance_create_layer(x, y, "Instances", global.player_arma_atual);
+    arma.pai = id;
+    arma.delay_pega = 0;
+    global.player_arma_atual = noone; 
+}

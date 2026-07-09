@@ -39,7 +39,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.4.222",
+    "IDEVersion":"2026.0.0.15",
   },
   "name":"Hismo atualizações",
   "resources":[
@@ -115,6 +115,7 @@
     {"id":{"name":"spr_cupmagic","path":"sprites/spr_cupmagic/spr_cupmagic.yy",},},
     {"id":{"name":"spr_explosao","path":"sprites/spr_explosao/spr_explosao.yy",},},
     {"id":{"name":"spr_flauta","path":"sprites/spr_flauta/spr_flauta.yy",},},
+    {"id":{"name":"spr_jungle","path":"sprites/spr_jungle/spr_jungle.yy",},},
     {"id":{"name":"spr_lizard_idle","path":"sprites/spr_lizard_idle/spr_lizard_idle.yy",},},
     {"id":{"name":"spr_lizard_run","path":"sprites/spr_lizard_run/spr_lizard_run.yy",},},
     {"id":{"name":"spr_lucas_idle","path":"sprites/spr_lucas_idle/spr_lucas_idle.yy",},},
@@ -135,6 +136,7 @@
     {"id":{"name":"Tom_da_Floresta","path":"sprites/Tom_da_Floresta/Tom_da_Floresta.yy",},},
     {"id":{"name":"ukulele","path":"sprites/ukulele/ukulele.yy",},},
     {"id":{"name":"viol_o","path":"sprites/viol_o/viol_o.yy",},},
+    {"id":{"name":"tl_jungle","path":"tilesets/tl_jungle/tl_jungle.yy",},},
     {"id":{"name":"tl_level","path":"tilesets/tl_level/tl_level.yy",},},
     {"id":{"name":"tl_paredes_dentro","path":"tilesets/tl_paredes_dentro/tl_paredes_dentro.yy",},},
     {"id":{"name":"tl_paredes_fora","path":"tilesets/tl_paredes_fora/tl_paredes_fora.yy",},},
@@ -151,5 +153,6 @@
   "templateType":"game",
   "TextureGroups":[
     {"$GMTextureGroup":"","%Name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"Default","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMTextureGroup":"","%Name":"texturegroup1","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"texturegroup1","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
   ],
 }
