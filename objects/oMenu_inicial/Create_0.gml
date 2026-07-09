@@ -3,6 +3,7 @@ if (file_exists("save_hismo.json")) {
 } else {
     opcoes = ["NOVO JOGO", "MUSEU", "SOBRE", "SAIR"];
 }
+audio_stop_all();
 
 index_selecionado = 0;
 
