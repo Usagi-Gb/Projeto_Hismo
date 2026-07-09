@@ -2,7 +2,7 @@
 current_wave = 1;
 onda_maxima = 6; 
 boss_spawnado = false;
-enemies_to_spawn = 5; 
+enemies_to_spawn = 5;
 spawn_timer = 0;
 spawn_cooldown = 60; 
 inimigos_vivos_no_mapa = 0;

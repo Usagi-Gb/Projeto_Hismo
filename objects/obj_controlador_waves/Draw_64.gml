@@ -3,7 +3,7 @@ draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 
 draw_text(20, 45, "WAVE: " + string(current_wave));
-draw_text(20, 75, "INIMIGOS RESTANTES: " + string(instance_number(obj_booby)));
+draw_text(20, 75, "INIMIGOS RESTANTES: " + string(inimigos_vivos_no_mapa));
 
 if (timer_next_wave > 0) {
     draw_set_halign(fa_center);
