@@ -35,6 +35,26 @@ if (room == room_boss) {
         }
     }
 }
+if (room == roomsobre) {
+  
+    for (var i = 0; i < _tam_museu; i++) {
+        if (global.conquistas[i].nome == "Violao" && !global.conquistas[i].desbloqueado) {
+            global.conquistas[i].desbloqueado = true; 
+            array_push(lista_conquistas, "Item Secreto Revelado: Violao!"); 
+            break;
+        }
+    }
+}
+if (room == roomsobre) {
+  
+    for (var i = 0; i < _tam_museu; i++) {
+        if (global.conquistas[i].nome == "Ukulele" && !global.conquistas[i].desbloqueado) {
+            global.conquistas[i].desbloqueado = true; 
+            array_push(lista_conquistas, "Item Secreto Revelado: Ukulele!"); 
+            break;
+        }
+    }
+}
     if (global.boobs_mortos >= 1) {
         for (var i = 0; i < _tam_museu; i++) {
             if (global.conquistas[i].nome == "Bandana" && !global.conquistas[i].desbloqueado) {

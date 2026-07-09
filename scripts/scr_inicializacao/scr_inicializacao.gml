@@ -95,8 +95,8 @@ global.conquistas = [
         desbloqueado: true
     },
     {
-        nome: "Violão do Museu",
-        desc_bloqueado: "Recompensa por o usar durante Gameplay",
+        nome: "Violao",
+        desc_bloqueado: "Recompensa por abrir a pagina sobre",
         desc_desbloqueado: "",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: museu_viol_o,
@@ -104,8 +104,8 @@ global.conquistas = [
     },
     {
         nome: "Ukulele",
-        desc_bloqueado: "Equipe o Ukulele durante a Gameplay",
-        desc_desbloqueado: "Tenho ",
+        desc_bloqueado: "Recompensa por abrir a pagina sobre",
+        desc_desbloqueado: "",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: ukulele,
         desbloqueado: false
