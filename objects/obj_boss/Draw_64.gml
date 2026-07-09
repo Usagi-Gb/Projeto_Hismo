@@ -22,5 +22,5 @@ draw_healthbar(_x1, _y1, _x2, _y2, _porcentagem, c_dkgray, c_red, c_red, 0, true
 // 3. Desenha o nome do Boss
 draw_set_color(c_white);
 draw_set_halign(fa_center);
-draw_text(_largura_tela / 2, _y1 - 25, "O GRANDE MESTRE"); // Troque pelo nome do seu Boss
+draw_text(_largura_tela / 2, _y1 - 25, "O Rei da Floresta"); 
 draw_set_halign(fa_left); // Reseta o alinhamento do texto para não bugar outras partes do jogo

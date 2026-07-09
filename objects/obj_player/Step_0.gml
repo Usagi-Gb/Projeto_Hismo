@@ -4,18 +4,16 @@ if (vida <= 0 && !game_over) {
     // Limpa a lista para garantir que começa vazia
     lista_conquistas = []; 
     // a
-    // Pega a onda atual ANTES de congelar o jogo!
+    // Pega a onda atual antes de congelar o jogo!
     var _ondas = 0;
     if (instance_exists(obj_controlador_waves)) {
         _ondas = obj_controlador_waves.current_wave;
         ondas_alcancadas = _ondas; // Atualiza a variável original por segurança
     }
     
-    // --- ESTATÍSTICAS BASE ---
     array_push(lista_conquistas, "Ondas Concluidas: " + string(_ondas - 1));
     array_push(lista_conquistas, "Inimigos Mortos: " + string(global.inimigos_mortos));
     
-    // --- TROFÉUS PADRÃO ---
     if (_ondas >= 5) {
         array_push(lista_conquistas, "Trofeu: VETERANO DE GUERRA!");
     }
@@ -26,38 +24,33 @@ if (vida <= 0 && !game_over) {
         array_push(lista_conquistas, "Trofeu: MESTRE DO RITMO!");
     }
     
-    // --- DESBLOQUEIOS SECRETOS DO MUSEU ---
+    //DESBLOQUEIOS DO MUSEU
     var _tam_museu = array_length(global.conquistas);
 
-    // Desbloqueio Oculto: Bandana (10 Lizards)
-    if (global.lizards_mortos >= 10) {
+    if (global.boobs_mortos >= 10) {
         for (var i = 0; i < _tam_museu; i++) {
             if (global.conquistas[i].nome == "Bandana" && !global.conquistas[i].desbloqueado) {
-                global.conquistas[i].desbloqueado = true; // Libera no museu
+                global.conquistas[i].desbloqueado = true; 
                 array_push(lista_conquistas, "Item Secreto Revelado: BANDANA!"); 
                 break;
             }
         }
     }
 
-    // Desbloqueio Oculto: Colar (4 Sapos)
     if (global.sapos_mortos >= 4) {
         for (var i = 0; i < _tam_museu; i++) {
             if (global.conquistas[i].nome == "Colar" && !global.conquistas[i].desbloqueado) {
-                global.conquistas[i].desbloqueado = true; // Libera no museu
+                global.conquistas[i].desbloqueado = true; 
                 array_push(lista_conquistas, "Item Secreto Revelado: COLAR!"); 
                 break;
             }
         }
     }
 
-    // --- MENSAGEM DE INCENTIVO ---
-    // Se a lista tiver apenas 2 itens (as estatísticas base), significa que não ganhou troféus
     if (array_length(lista_conquistas) <= 2) {
          array_push(lista_conquistas, "Dica: Tente sobreviver mais tempo!");
     }
 
-    // --- CONGELAMENTO DA TELA ---
     var _width = surface_get_width(application_surface);
     var _height = surface_get_height(application_surface);
     gameover_surf = surface_create(_width, _height);
@@ -66,7 +59,6 @@ if (vida <= 0 && !game_over) {
     instance_deactivate_all(true);
 }
 
-// Lógica para sair da tela de Game Over
 if (game_over) {
     if (keyboard_check_pressed(vk_space)) {
         instance_activate_all();
@@ -120,8 +112,10 @@ if (is_dashing) {
     if (_movendo) {
         move_dir = point_direction(0, 0, (right - left), (down - up));
         vel = max_vel;
+		sprite_index = spr_lucas_run;
     } else {
         vel = lerp(vel, 0, 0.1); 
+		sprite_index = spr_lucas_idle
     }
 }
 

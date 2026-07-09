@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"lucas3",
-    "path":"sprites/lucas3/lucas3.yy",
+    "name":"spr_lucas_idle",
+    "path":"sprites/spr_lucas_idle/spr_lucas_idle.yy",
   },
   "spriteMaskId":null,
   "visible":true,

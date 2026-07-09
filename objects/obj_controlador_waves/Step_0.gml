@@ -1,4 +1,3 @@
-// 1. Contagem de inimigos vivos
 inimigos_vivos_no_mapa = 0;
 
 with (obj_inimigo_pai) {
@@ -7,7 +6,7 @@ with (obj_inimigo_pai) {
     }
 }
 
-// 2. Timer e transição de Wave / Room do Boss
+// Controle de transicao das waves
 if (enemies_to_spawn <= 0 && inimigos_vivos_no_mapa == 0 && !boss_spawnado) {
     if (timer_next_wave == 0) {
         timer_next_wave = 180; 
@@ -25,43 +24,33 @@ if (timer_next_wave > 0) {
         else if (!boss_spawnado) {
             boss_spawnado = true;
             enemies_to_spawn = 0; 
-            
-            // Vai para a sala do Boss
             room_goto(room_boss); 
         }
     }
 }
 
-// 3. Drop de Armas
+// Drop de armas
 if (current_wave > ultima_wave_verificada && current_wave <= onda_maxima) {
     if (ultima_wave_verificada % 2 == 0) {
         
-        var _arma_no_mapa = false;
         var _qtd_armas = array_length(lista_armas_drop);
+        var _arma_escolhida = lista_armas_drop[irandom(_qtd_armas - 1)];
         
-        for (var i = 0; i < _qtd_armas; i++) {
-            if (instance_exists(lista_armas_drop[i])) {
-                _arma_no_mapa = true;
-                break; 
-            }
+        var _drop_x = room_width / 2;
+        var _drop_y = room_height / 2;
+        
+        if (instance_exists(obj_player)) {
+            _drop_x = obj_player.x + 50;
+            _drop_y = obj_player.y;
         }
         
-        if (!_arma_no_mapa) { 
-            var _sorteio = irandom(_qtd_armas - 1);
-            var _arma_escolhida = lista_armas_drop[_sorteio];
-            
-            if (instance_exists(obj_player)) {
-                instance_create_layer(obj_player.x + 50, obj_player.y, "Instances", _arma_escolhida);
-            } else {
-                instance_create_layer(room_width / 2, room_height / 2, "Instances", _arma_escolhida);
-            }
-        }
+        instance_create_layer(_drop_x, _drop_y, "Instances", _arma_escolhida);
     }
     
     ultima_wave_verificada = current_wave;
 }
 
-// 4. Lógica de Spawn Segura contra Paredes
+// Spawn dos inimigos
 if (enemies_to_spawn > 0 && timer_next_wave <= 0 && !boss_spawnado) {
     spawn_timer--;
     

@@ -8,7 +8,7 @@ if (estado != estado_morto) {
     if (timer_ataque > 0) {
         timer_ataque--;
     } else {
-        // Altera aleatoriamente entre o ataque de onda (0) e o grito em cone (1)
+        
         tipo_ataque = choose(0, 1);
         
         if (tipo_ataque == 0) {

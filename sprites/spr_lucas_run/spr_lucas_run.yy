@@ -1,6 +1,6 @@
 {
   "$GMSprite":"v2",
-  "%Name":"lucas3",
+  "%Name":"spr_lucas_run",
   "bboxMode":0,
   "bbox_bottom":29,
   "bbox_left":7,
@@ -23,7 +23,7 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"b19cc2c7-a3a0-421d-ba54-ff6c1294ed61","blendMode":0,"displayName":"default","isLocked":false,"name":"b19cc2c7-a3a0-421d-ba54-ff6c1294ed61","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"lucas3",
+  "name":"spr_lucas_run",
   "nineSlice":null,
   "origin":9,
   "parent":{
@@ -35,7 +35,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"v1",
-    "%Name":"lucas3",
+    "%Name":"spr_lucas_run",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -59,7 +59,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"lucas3",
+    "name":"spr_lucas_run",
     "playback":1,
     "playbackSpeed":7.0,
     "playbackSpeedType":0,
@@ -71,13 +71,13 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f7266d4b-2a96-4ec3-a21b-741073af048e","path":"sprites/lucas3/lucas3.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f7266d4b-2a96-4ec3-a21b-741073af048e","path":"sprites/spr_lucas_run/spr_lucas_run.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"a8174b93-8e3b-4486-b334-8d1ce7dffd95","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"cee5dae2-69b8-4319-a172-0956edf9db84","path":"sprites/lucas3/lucas3.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"cee5dae2-69b8-4319-a172-0956edf9db84","path":"sprites/spr_lucas_run/spr_lucas_run.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"991bc8fd-7e4e-4e02-962c-d902a77a0969","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a331827a-7b50-4fb1-900b-5b2a4ca7a380","path":"sprites/lucas3/lucas3.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a331827a-7b50-4fb1-900b-5b2a4ca7a380","path":"sprites/spr_lucas_run/spr_lucas_run.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"2fa689bd-1a36-4ac4-bd09-a8a55b71b864","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],

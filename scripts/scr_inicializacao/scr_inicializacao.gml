@@ -1,13 +1,10 @@
-// --- GARANTIA DE ESTATÍSTICAS GLOBAIS ---
 // Declaramos aqui para o jogo nunca dar erro de "not set before reading"
 global.inimigos_mortos = 0;
-global.lizards_mortos = 0;
+global.boobs_mortos = 0;
 global.sapos_mortos = 0;
+global.ratos_mortos = 0;
 global.ritmos_acertados = 0;
 global.conquistas = [
-    // ==========================================
-    // ITENS ORIGINAIS
-    // ==========================================
     {
         nome: "Laudo",
         desc_bloqueado: "...",
@@ -40,10 +37,6 @@ global.conquistas = [
         spr_desbloqueado: Acidentes,
         desbloqueado: true
     },
-    
-    // ==========================================
-    // OS 16 NOVOS ITENS DO MUSEU
-    // ==========================================
     {
         nome: "Clave de Fá",
         desc_bloqueado: "...",

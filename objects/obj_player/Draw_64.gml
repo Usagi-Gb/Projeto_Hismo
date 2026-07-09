@@ -30,33 +30,28 @@ else {
     draw_rectangle(0, 0, _largura, _altura, false);
     draw_set_alpha(1.0); // Reseta a transparência para os textos
 
-    // 3. Configurações de alinhamento para o centro
+    // Configurações de alinhamento para o centro
     draw_set_halign(fa_center);
     draw_set_valign(fa_middle);
     
-    // 4. Desenhar o Título
+    // Título
     draw_set_color(c_red);
     draw_text_transformed(_largura / 2, _altura / 2 - 80, "GAME OVER", 2, 2, 0); 
     
-    // 5. Desenhar o Título das Conquistas
+    // Título das Conquistas
     draw_set_color(c_yellow);
     draw_text(_largura / 2, _altura / 2 - 20, "Conquistas Obtidas:");
     draw_set_color(c_white);
 	
-    // Descobre quantos itens/troféus o jogador ganhou nessa partida
+    // Quantos itens/troféus o jogador ganhou nessa partida
     var _tam = array_length(lista_conquistas);
-    
-    // O 'for' vai rodar e desenhar linha por linha
+
     for (var i = 0; i < _tam; i++) {
-        // A matemática '+ (i * 25)' faz com que a próxima frase desça 25 pixels,
         draw_text(_largura / 2, _altura / 2 + 15 + (i * 25), "- " + lista_conquistas[i]);
     }
-
-    // 6. Instrução para voltar (Empurrada mais para baixo para não bater na lista!)
     draw_set_color(c_gray);
     draw_text(_largura / 2, _altura / 2 + 140, "Aperte ESPACO para voltar ao menu");
-
-    // 7. Reseta o alinhamento para não estragar outras interfaces
+    // Reseta o alinhamento para não estragar outras interfaces
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);
     draw_set_color(c_white);

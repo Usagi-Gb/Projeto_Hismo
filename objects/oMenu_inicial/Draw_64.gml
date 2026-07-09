@@ -1,7 +1,7 @@
 var _largura = display_get_gui_width();
 var _altura = display_get_gui_height();
 
-// Definição do espaçamento (Aumente o valor abaixo se quiser afastar ainda mais)
+// Definição do espaçamento
 var _espacamento = 30; 
 var _y_inicial = _altura / 2; 
 

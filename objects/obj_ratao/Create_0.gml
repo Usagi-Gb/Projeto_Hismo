@@ -60,7 +60,6 @@ desenha_sombra = function(){
 	draw_sprite_ext(spr_sombra, 0, x, y, .2, .2, 0, c_white, .25);
 }
 
-// 1. O inimigo não descansa mais se o jogador estiver vivo
 estado_parado = function(){
    sprite = spr_ratao;
     sprite_index = spr_ratao;
@@ -68,48 +67,35 @@ estado_parado = function(){
     velv = 0;
     
     if (instance_exists(obj_player)) {
-        estado = estado_persegue; // Vai pra cima instantaneamente
+        estado = estado_persegue; 
     }
 }
 
-// 2. Ele também não fica passeando aleatoriamente
 estado_passeando = function(){
     if (instance_exists(obj_player)) {
-        estado = estado_persegue; // Vai pra cima instantaneamente
+        estado = estado_persegue;
     }
 }
 
-// 3. O estado de Perseguição com IA de Desvio de Parede
 estado_persegue = function(){
    sprite = spr_ratao_run;
     sprite_index = spr_ratao_run;
     
     if (instance_exists(obj_player)) {
-        alvo = obj_player; // Foco cravado no jogador
-        
-        // --- INTELIGÊNCIA ARTIFICIAL DO GAMEMAKER ---
-        // Ele tenta ir até o alvo usando a velocidade (vel), mas se encontrar
-        // um obj_block no caminho, ele calcula uma rota para dar a volta!
+        alvo = obj_player;
         mp_potential_step_object(alvo.x, alvo.y, vel, obj_block);
-        
-        // Como a função acima move o X e Y do inimigo diretamente de forma perfeita,
-        // nós zeramos velh e velv para o inimigo não "escorregar" com o seu sistema de colisões antigo.
         velh = 0; 
         velv = 0;
-        
-        // Faz o inimigo virar o rosto para a direção certa
-        if (alvo.x != x) xscale = sign(alvo.x - x);
-        
-        // Calcula a distância real para saber se já pode bater
+		
+        if (alvo.x != x) xscale = sign(alvo.x - x);       
         var _dist = point_distance(x, y, alvo.x, alvo.y);
         
-        // Substituímos o "larg_visao" por um número de pixels (ex: 40 pixels de distância para preparar o pulo/bomba)
         if (_dist < 180) { 
             estado = estado_prepara_ataque;
         }
     }
     else {
-        estado = estado_parado; // Se o player morrer, ele descansa
+        estado = estado_parado;
     }
 }
 estado_prepara_ataque = function(){
@@ -137,15 +123,12 @@ estado_prepara_ataque = function(){
 estado_ataque = function(){
     tempo_ataque -= delta_time / 1000000;
     image_blend = c_white;
-    velh = 0; // O Ratão fica parado enquanto joga a bomba
+    velh = 0;
     velv = 0;
     
-    // Só cria a bomba no exato frame que o ataque começa
-    // Usamos uma variável auxiliar "jogou_bomba" para garantir que ele não crie 60 bombas por segundo
     if (!jogou_bomba) {
         var _bomba = instance_create_layer(x, y, "Instances", obj_bomba);
         
-        // Joga a bomba na direção que o player estava
         _bomba.speed = 8; // Força do arremesso
         _bomba.direction = alvo_dir; 
         
@@ -184,34 +167,22 @@ estado_morto = function(){
 }
 
 leva_dano = function(_dano){
-    // Só toma dano se ainda não estiver morto
-    if (estado != estado_morto) {
-        
-        // 1. Aplica o dano matemático na vida
+    if (estado != estado_morto) { 
         if (_dano == undefined) vida_atual -= 1;
         else vida_atual -= _dano;
-        
-        // 2. Ativa a variável que faz o inimigo piscar de branco no Draw
         dano = true;
-        
-        // 3. Verifica IMEDIATAMENTE se esse tiro matou o inimigo
-        // 3. Verifica IMEDIATAMENTE se esse tiro matou o inimigo
+
         if (vida_atual <= 0) {
             global.inimigos_mortos++; 
-            global.lizards_mortos++; // (ou sapos_mortos dependendo do inimigo)
-            
-            // --- NOVO: SISTEMA DE DROP (20% DE CHANCE) ---
-            var _chance = irandom(100); // Sorteia um número de 0 a 100
-            if (_chance <= 20) {
-                // Cria o cupmagic exatamente na posição onde o monstro morreu
+            global.boobs_mortos++; 
+
+            var _chance = irandom(100);
+            if (_chance <= 100) {
                 instance_create_layer(x, y, "Instances", obj_cupmagic);
             }
             
             estado = estado_morto;
         }
-        // 4. Se ele NÃO morreu, aplicamos a "Super Armadura"!
-        // Ele só vai para o 'estado_dano' (que empurra para trás e interrompe)
-        // se ele NÃO estiver se preparando para atacar e NÃO estiver atacando.
         else if (estado != estado_ataque && estado != estado_prepara_ataque) {
             estado = estado_dano;
         }

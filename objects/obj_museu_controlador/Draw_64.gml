@@ -36,7 +36,6 @@ for (var i = 0; i < _tam_menu; i++) {
         _texto_para_desenhar = _item.desc_desbloqueado;
     }
     
-    // Área de colisão (hitbox) baseada no tamanho do sprite (128) com um pouco de folga
     var _box_w = 160 * _escala;
     var _box_h = 160 * _escala;
     var x1 = _item_x - _box_w / 2;
@@ -64,32 +63,20 @@ for (var i = 0; i < _tam_menu; i++) {
     }
     
     draw_set_alpha(_alpha);
-    
-    // --- LÓGICA DE POSICIONAMENTO E DESENHO CORRIGIDA ---
-    
+
     if (sprite_exists(_sprite_para_desenhar)) {
-        // O sprite agora é desenhado exatamente no centro (_item_y)
         draw_sprite_ext(_sprite_para_desenhar, 0, _item_x, _item_y, _escala, _escala, 0, c_white, _alpha);
     }
-    
+	
     draw_set_color(c_white);
-    
-    // Calcula onde fica a base do sprite. Sendo 128px total, o raio/metade é 64px.
-    // Multiplicamos 64 pela escala para saber o deslocamento dinâmico.
-    var _deslocamento_y = (128 / 2) * _escala;
-    
-    // O título fica abaixo da base do sprite + uma margem de 25 pixels
+    var _deslocamento_y = (128 / 2) * _escala;    
     var _titulo_y = _item_y + _deslocamento_y + 25;
     draw_text_transformed(_item_x, _titulo_y, _item.nome, _escala, _escala, 0);
     
-    // A descrição aparece apenas no item central
     if (_abs_dist < 0.5) {
-        // A descrição é colocada um pouco abaixo do título
         var _desc_y = _titulo_y + (30 * _escala); 
         draw_text_transformed(_item_x, _desc_y, _texto_para_desenhar, 0.9, 0.9, 0);
     }
-    
-    // ----------------------------------------------------
 }
 
 draw_set_alpha(1.0);

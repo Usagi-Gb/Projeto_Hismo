@@ -1,4 +1,3 @@
-// Textos de Controles e Mecânicas
 esc_voltar = 1;
 titulo = "COMO JOGAR";
 
