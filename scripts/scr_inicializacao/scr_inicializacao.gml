@@ -7,7 +7,7 @@ global.conquistas = [
     {
         nome: "Laudo",
         desc_bloqueado: "...",
-        desc_desbloqueado: "Paciente Lucas foi diagnosticado por Dr Mario Polombo como uma pessoa com distúrbio psicológico amusia...",
+        desc_desbloqueado: "Paciente Lucas foi diagnosticado por Dr Mario Polombo como uma pessoa com disturbio psicologico amusia...",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: Laudo,
         desbloqueado: true
@@ -15,15 +15,15 @@ global.conquistas = [
     {
         nome: "Partitura",
         desc_bloqueado: "...",
-        desc_desbloqueado: "O instrumento que tocará a partitura escolhe como a partitura será escrita.\n O meio de notar a onde está quais notas é chamado de *CLAVE*.",
+        desc_desbloqueado: "O instrumento que tocara a partitura escolhe como a partitura sera escrita.\n O meio de notar a onde está quais notas tem o nome de *CLAVE*.",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: partitura,
         desbloqueado: true
     },
 {
         nome: "Acidentes",
-        desc_bloqueado: "Recompensa por desbloquear e ambas partituras apenas Sol.",
-        desc_desbloqueado: "Os acidentes são parte vital de muitas sonoridades de qualquer música que as utilize,\n sendo as mais comuns o sustenido e o Bmol.\n A partitura acima contém, Sol Bmol, Sol puro e Sol sustenido.",
+        desc_bloqueado: "Recompensa por desbloquear e ambas partituras de Clave.",
+        desc_desbloqueado: "Os acidentes são parte vital de muitas sonoridades de qualquer musica que as utilize,\n sendo as mais comuns o sustenido e o Bmol.\n A partitura acima contem, Sol Bmol, Sol puro e Sol sustenido.",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: AcidenteL_,
         desbloqueado: false
@@ -31,7 +31,7 @@ global.conquistas = [
 	{
         nome: "Crescente",
         desc_bloqueado: "Bloqueado: Derrote o MC Perereca.",
-        desc_desbloqueado: "No processo de escritura você pode conectar duas notas para criar ou uma prolongação\n ou, neste caso, uma dinâmica de em uma só leva crescer ou decrescer até a nota alvo.",
+        desc_desbloqueado: "No processo de escritura voce pode conectar duas notas para criar ou uma prolongaçao\n ou, neste caso, uma dinamica de em uma so leva crescer ou decrescer ate a nota alvo.",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: Acidentes,
         desbloqueado: false
@@ -39,7 +39,7 @@ global.conquistas = [
 	{
         nome: "Clave de Sol",
         desc_bloqueado: "Recompensa de primeira wave",
-        desc_desbloqueado: "Nesta clave a nota sol estará na segunda linha.",
+        desc_desbloqueado: "Nesta clave a nota sol estara na segunda linha.",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: clava_de_sol,
         desbloqueado: false
@@ -62,8 +62,8 @@ global.conquistas = [
     },
     {
         nome: "Jornal Marley",
-        desc_bloqueado: "Sofra uma derrota para um Boob Marley",
-        desc_desbloqueado: "... Durante sua 4° turnê pelo Brasil, o artista audiovisual Boob Marley teve seu historico primeiro \nproblema tecnico durante o show na Bahia quando um de seus fãs conseguiu entrar no camarin de Boob Marley durante o show.\n Boob Marley, em sua metodologia peculiar, decidiu resolver o problema pessoalmente e teve que interromper seu proprio show.",
+        desc_bloqueado: "Derrote",
+        desc_desbloqueado: "... Durante sua 4° turne pelo Brasil, o artista audiovisual Boob Marley teve seu historico primeiro \nproblema tecnico durante o show na Bahia quando um de seus fas conseguiu entrar no camarin de Boob Marley durante o show.\n Boob Marley, em sua metodologia peculiar, decidiu resolver o problema pessoalmente e teve que interromper seu proprio show.",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: JornalCidadeMARLEY,
         desbloqueado: false
@@ -71,7 +71,7 @@ global.conquistas = [
 	{ 
 		nome: "Bomba Bombastic",
         desc_bloqueado: "Abata um MC Bombastic",
-        desc_desbloqueado: "\nO mais famoso MR Bombastic bombou em todos os jeitos.\n Sua musica? Apenas bombas.\n Sua fama? Explosiva.\n Sua vida? Apenas uma explosão rapida infelizmente…",
+        desc_desbloqueado: "\nO mais famoso MR Bombastic bombou em todos os jeitos.\n Sua musica? Apenas bombas.\n Sua fama? Explosiva.\n Sua vida? Apenas uma explosao rapida infelizmente…",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: spr_bomba_quase,
         desbloqueado: false,
@@ -87,7 +87,7 @@ global.conquistas = [
     {
         nome: "Oito Notas",
         desc_bloqueado: "...",
-        desc_desbloqueado: "O intervalo mais curto frequentemente utilizavel",
+        desc_desbloqueado: "O intervalo mais curto que e frequentemente utilizado",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: _8_notas,
         desbloqueado: true
