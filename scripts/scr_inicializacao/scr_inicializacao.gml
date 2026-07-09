@@ -135,7 +135,7 @@ global.conquistas = [
 	{
 		nome: "Cupcake",
 		desc_bloqueado: "Consuma um cupcake durante Gameplay",
-		desc_desbloqueado: "Este Cupcake é especial, ele é o melhor Cupcake que você poderia comer em sua vida, Ele te revigora no Físico E no espírito.",
+		desc_desbloqueado: "Este Cupcake é especial, ele e o melhor Cupcake que você poderia comer em sua vida, Ele te revigora no Fisico E no espirito.",
 		spr_bloqueado: spr_cadeado,
 		spr_desbloqueado: CupC,
 		desbloqueado: false
