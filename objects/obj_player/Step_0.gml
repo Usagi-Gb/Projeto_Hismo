@@ -3,12 +3,14 @@ if (vida <= 0 && !game_over) {
     
     // Limpa a lista para garantir que começa vazia
     lista_conquistas = []; 
-    // a
+
     // Pega a onda atual antes de congelar o jogo!
     var _ondas = 0;
     if (instance_exists(obj_controlador_waves)) {
         _ondas = obj_controlador_waves.current_wave;
         ondas_alcancadas = _ondas; // Atualiza a variável original por segurança
+		if (ondas_alcancadas-1 > global.ondas_maximas) {global.ondas_maximas = ondas_alcancadas}
+		else {};
     }
     
     array_push(lista_conquistas, "Ondas Concluidas: " + string(_ondas - 1));
@@ -27,7 +29,7 @@ if (vida <= 0 && !game_over) {
     //DESBLOQUEIOS DO MUSEU
     var _tam_museu = array_length(global.conquistas);
 
-    if (global.boobs_mortos >= 10) {
+    if (global.boobs_mortos >= 1) {
         for (var i = 0; i < _tam_museu; i++) {
             if (global.conquistas[i].nome == "Bandana" && !global.conquistas[i].desbloqueado) {
                 global.conquistas[i].desbloqueado = true; 
@@ -36,8 +38,53 @@ if (vida <= 0 && !game_over) {
             }
         }
     }
+	if (global.boobs_mortos >= 3) {
+        for (var i = 0; i < _tam_museu; i++) {
+            if (global.conquistas[i].nome == "Jornal Marley" && !global.conquistas[i].desbloqueado) {
+                global.conquistas[i].desbloqueado = true; 
+                array_push(lista_conquistas, "Item Secreto Revelado: Jornal Marley"); 
+                break;
+            }
+        }
+    }
+	 if (global.inimigos_mortos >= 1) {
+        for (var i = 0; i < _tam_museu; i++) {
+            if (global.conquistas[i].nome == "Clave de Sol" && !global.conquistas[i].desbloqueado) {
+                global.conquistas[i].desbloqueado = true; 
+                array_push(lista_conquistas, "Item Secreto Revelado: Clave de Sol!"); 
+                break;
+            }
+        }
+    }
+	if (global.ondas_maximas >= 1) {
+        for (var i = 0; i < _tam_museu; i++) {
+            if (global.conquistas[i].nome == "Clave de Fa" && !global.conquistas[i].desbloqueado) {
+                global.conquistas[i].desbloqueado = true; 
+                array_push(lista_conquistas, "Item Secreto Revelado: Clave de Fa!"); 
+                break;
+            }
+        }
+    }
+	 if (global.inimigos_mortos >= 10) {
+        for (var i = 0; i < _tam_museu; i++) {
+            if (global.conquistas[i].nome == "Cupcake" && !global.conquistas[i].desbloqueado) {
+                global.conquistas[i].desbloqueado = true; 
+                array_push(lista_conquistas, "Item Secreto Revelado: Cupcake!"); 
+                break;
+            }
+        }
+    }
+	 if (global.ratos_mortos >= 1) {
+        for (var i = 0; i < _tam_museu; i++) {
+            if (global.conquistas[i].nome == "Bomba Bombastic" && !global.conquistas[i].desbloqueado) {
+                global.conquistas[i].desbloqueado = true; 
+                array_push(lista_conquistas, "Item Secreto Revelado: Bomba Bombastic!"); 
+                break;
+            }
+        }
+    }
 
-    if (global.sapos_mortos >= 4) {
+    if (global.sapos_mortos >= 1) {
         for (var i = 0; i < _tam_museu; i++) {
             if (global.conquistas[i].nome == "Colar" && !global.conquistas[i].desbloqueado) {
                 global.conquistas[i].desbloqueado = true; 

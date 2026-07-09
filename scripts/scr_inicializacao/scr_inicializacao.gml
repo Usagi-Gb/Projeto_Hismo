@@ -3,6 +3,7 @@ global.boobs_mortos = 0;
 global.sapos_mortos = 0;
 global.ratos_mortos = 0;
 global.ritmos_acertados = 0;
+global.ondas_maximas = 0;
 global.conquistas = [
     {
         nome: "Laudo",
@@ -22,14 +23,14 @@ global.conquistas = [
     },
 {
         nome: "Acidentes",
-        desc_bloqueado: "Recompensa por desbloquear e ambas partituras de Clave.",
+        desc_bloqueado: "Recompensa por desbloquear e ambas partituras de Clave.",//precisa conferir se 
         desc_desbloqueado: "Os acidentes são parte vital de muitas sonoridades de qualquer musica que as utilize,\n sendo as mais comuns o sustenido e o Bmol.\n A partitura acima contem, Sol Bmol, Sol puro e Sol sustenido.",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: AcidenteL_,
         desbloqueado: false
     },
 	{
-        nome: "Crescente",
+        nome: "Crescente", // precisa conferir 
         desc_bloqueado: "Bloqueado: Derrote o MC Perereca.",
         desc_desbloqueado: "No processo de escritura voce pode conectar duas notas para criar ou uma prolongaçao\n ou, neste caso, uma dinamica de em uma so leva crescer ou decrescer ate a nota alvo.",
         spr_bloqueado: spr_cadeado,
@@ -38,15 +39,15 @@ global.conquistas = [
     },
 	{
         nome: "Clave de Sol",
-        desc_bloqueado: "Recompensa de primeira wave",
+        desc_bloqueado: "Recompensa de primeiro abate",
         desc_desbloqueado: "Nesta clave a nota sol estara na segunda linha.",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: clava_de_sol,
         desbloqueado: false
     },
     {
-        nome: "Clave de Fá",
-        desc_bloqueado: "Recompensa de primeiro abate",
+        nome: "Clave de Fa",
+        desc_bloqueado: "Recompensa de primeira wave",
         desc_desbloqueado: "...já nesta clave terá um sol no espaço sobre a quarta linha.",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: Clave_Fa,
@@ -110,7 +111,7 @@ global.conquistas = [
     },
     {
         nome: "Bandana",
-        desc_bloqueado: "Derrote 10 Boob Marleys",
+        desc_bloqueado: "Derrote um Boob Marley",
         desc_desbloqueado: "O Boob Marley permitiu que eu pegasse sua bandana como um presente durante o show por eu ser seu maior fã.",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: bandana,
@@ -134,7 +135,7 @@ global.conquistas = [
     },
 	{
 		nome: "Cupcake",
-		desc_bloqueado: "Consuma um cupcake durante Gameplay",
+		desc_bloqueado: "Elimine 10 inimigos",
 		desc_desbloqueado: "Este Cupcake é especial, ele e o melhor Cupcake que você poderia comer em sua vida, Ele te revigora no Fisico E no espirito.",
 		spr_bloqueado: spr_cadeado,
 		spr_desbloqueado: CupC,
