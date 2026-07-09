@@ -9,9 +9,7 @@ inimigos_vivos_no_mapa = 0;
 ultima_wave_verificada = 1;
 timer_next_wave = 0; 
 
-
 lista_armas_drop = [obj_cajado_axe, obj_cajado_verde, obj_cajado_vermelho];
-
 
 global.inimigos_mortos = 0;
 global.boobs_mortos = 0;
