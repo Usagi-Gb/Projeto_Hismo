@@ -141,3 +141,73 @@ global.conquistas = [
 		desbloqueado: false
 	},
 ];
+
+function salvar_jogo() {
+    var _dados_save = {
+        inimigos: global.inimigos_mortos,
+        boobs: global.boobs_mortos,
+        sapos: global.sapos_mortos,
+        ratos: global.ratos_mortos,
+        ritmos: global.ritmos_acertados,
+        conquistas_status: [] 
+    };
+
+    var _tam = array_length(global.conquistas);
+    for (var i = 0; i < _tam; i++) {
+        array_push(_dados_save.conquistas_status, global.conquistas[i].desbloqueado);
+    }
+
+    var _json_string = json_stringify(_dados_save);
+    var _pasta = file_text_open_write("save_hismo.json");
+    file_text_write_string(_pasta, _json_string);
+    file_text_close(_pasta);
+}
+
+function carregar_jogo() {
+    if (file_exists("save_hismo.json")) {
+        var _pasta = file_text_open_read("save_hismo.json");
+        var _json_string = file_text_read_string(_pasta);
+        file_text_close(_pasta);
+
+        var _dados_save = json_parse(_json_string);
+
+        global.inimigos_mortos = _dados_save.inimigos;
+        global.boobs_mortos = _dados_save.boobs;
+        global.sapos_mortos = _dados_save.sapos;
+        global.ratos_mortos = _dados_save.ratos;
+        global.ritmos_acertados = _dados_save.ritmos;
+
+        var _tam = array_length(global.conquistas);
+        for (var i = 0; i < _tam; i++) {
+            if (i < array_length(_dados_save.conquistas_status)) {
+                global.conquistas[i].desbloqueado = _dados_save.conquistas_status[i];
+            }
+        }
+    }
+}
+
+function deletar_save() {
+    if (file_exists("save_hismo.json")) {
+        file_delete("save_hismo.json");
+    }
+    
+    global.inimigos_mortos = 0;
+    global.boobs_mortos = 0;
+    global.sapos_mortos = 0;
+    global.ratos_mortos = 0;
+    global.ritmos_acertados = 0;
+    
+    var _tam = array_length(global.conquistas);
+    for (var i = 0; i < _tam; i++) {
+        var _nome = global.conquistas[i].nome;
+        
+        if (_nome == "Laudo" || _nome == "Partitura" || _nome == "Oito Notas") {
+            global.conquistas[i].desbloqueado = true;
+        } else {
+            global.conquistas[i].desbloqueado = false;
+        }
+    }
+}
+
+
+carregar_jogo();
