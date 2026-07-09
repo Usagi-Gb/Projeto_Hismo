@@ -65,11 +65,29 @@ if (vida <= 0 && !game_over) {
             }
         }
     }
-	 if (global.inimigos_mortos >= 10) {
+	if (global.inimigos_mortos >= 10) {
         for (var i = 0; i < _tam_museu; i++) {
             if (global.conquistas[i].nome == "Cupcake" && !global.conquistas[i].desbloqueado) {
                 global.conquistas[i].desbloqueado = true; 
                 array_push(lista_conquistas, "Item Secreto Revelado: Cupcake!"); 
+                break;
+            }
+        }
+    }
+	if (global.ondas_maximas >= 1 && global.inimigos_mortos >= 1) {
+        for (var i = 0; i < _tam_museu; i++) {
+            if (global.conquistas[i].nome == "Acidentes" && !global.conquistas[i].desbloqueado) {
+                global.conquistas[i].desbloqueado = true; 
+                array_push(lista_conquistas, "Item Secreto Revelado: Acidentes!"); 
+                break;
+            }
+        }
+    }
+	if (global.ondas_maximas >= 1 && global.inimigos_mortos >= 1) {
+        for (var i = 0; i < _tam_museu; i++) {
+            if (global.conquistas[i].nome == "Jingle" && !global.conquistas[i].desbloqueado) {
+                global.conquistas[i].desbloqueado = true; 
+                array_push(lista_conquistas, "Item Secreto Revelado: Jingle!"); 
                 break;
             }
         }
