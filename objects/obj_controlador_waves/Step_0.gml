@@ -24,7 +24,7 @@ if (timer_next_wave > 0) {
         else if (!boss_spawnado) {
             boss_spawnado = true;
             enemies_to_spawn = 0; 
-            
+            //TESTT
             // Salva os status do player para a transicao
             if (instance_exists(obj_player)) {
                 global.player_vida_atual = obj_player.vida;
