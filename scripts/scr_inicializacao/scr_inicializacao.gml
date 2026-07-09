@@ -4,6 +4,7 @@ global.sapos_mortos = 0;
 global.ratos_mortos = 0;
 global.ritmos_acertados = 0;
 global.ondas_maximas = 0;
+global.chefe_final_morto = false;
 global.conquistas = [
     {
         nome: "Laudo",
@@ -150,6 +151,7 @@ function salvar_jogo() {
         sapos: global.sapos_mortos,
         ratos: global.ratos_mortos,
         ritmos: global.ritmos_acertados,
+		CFM: global.chefe_final_morto,
         conquistas_status: [] 
     };
 
@@ -177,6 +179,7 @@ function carregar_jogo() {
         global.sapos_mortos = _dados_save.sapos;
         global.ratos_mortos = _dados_save.ratos;
         global.ritmos_acertados = _dados_save.ritmos;
+		global.chefe_final_morto = _dados_save.CFM;
 
         var _tam = array_length(global.conquistas);
         for (var i = 0; i < _tam; i++) {
@@ -197,6 +200,7 @@ function deletar_save() {
     global.sapos_mortos = 0;
     global.ratos_mortos = 0;
     global.ritmos_acertados = 0;
+	global.chefe_final_morto = false;
     
     var _tam = array_length(global.conquistas);
     for (var i = 0; i < _tam; i++) {

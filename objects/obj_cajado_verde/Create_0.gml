@@ -1,3 +1,3 @@
 
 event_inherited();
-dano_arma = 3;
+dano_arma = 12;

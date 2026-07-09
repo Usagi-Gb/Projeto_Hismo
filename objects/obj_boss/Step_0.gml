@@ -1,4 +1,6 @@
 if (vida_atual <= 0) {
+	global.chefe_final_morto = true;
+	global.player_vida_atual = 0;
     estado = estado_morto;
     room_goto(roominicial); 
     exit;
