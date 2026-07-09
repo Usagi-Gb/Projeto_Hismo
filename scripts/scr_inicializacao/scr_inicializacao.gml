@@ -80,8 +80,8 @@ global.conquistas = [
 	},
     {
         nome: "Tom da Floresta",
-        desc_bloqueado: "Abata o Chefe Final",
-        desc_desbloqueado: "O tom que tanto o perseguiu foi apenas uma unica nota. \n\n\n Do´",
+        desc_bloqueado: "Deslumbre o chefe final",
+        desc_desbloqueado: "\n\n O tom que tanto o perseguiu foi apenas uma unica nota. \n\n\n Do´",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: Tom_da_Floresta,
         desbloqueado: false
@@ -121,10 +121,10 @@ global.conquistas = [
     {
         nome: "Arco",
         desc_bloqueado: "...",
-        desc_desbloqueado: "Se um dia eu já tive um violino, esse violino ",
+        desc_desbloqueado: "",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: bow,
-        desbloqueado: false
+        desbloqueado: true
     },
     {
         nome: "Colar",
@@ -206,7 +206,7 @@ function deletar_save() {
     for (var i = 0; i < _tam; i++) {
         var _nome = global.conquistas[i].nome;
         
-        if (_nome == "Laudo" || _nome == "Partitura" || _nome == "Oito Notas") {
+        if (_nome == "Laudo" || _nome == "Partitura" || _nome == "Oito Notas" || _nome == "Arco") {
             global.conquistas[i].desbloqueado = true;
         } else {
             global.conquistas[i].desbloqueado = false;

@@ -25,15 +25,16 @@ if (vida <= 0 && !game_over) {
     //DESBLOQUEIOS DO MUSEU
     var _tam_museu = array_length(global.conquistas);
 	
-	if (global.chefe_final_morto != false) {
-        for (var i = 0; i < _tam_museu; i++) {
-            if (global.conquistas[i].nome == "Tom da Floresta" && !global.conquistas[i].desbloqueado) {
-                global.conquistas[i].desbloqueado = true; 
-                array_push(lista_conquistas, "Item Secreto Revelado: Tom da Floresta!"); 
-                break;
-            }
+if (room == room_boss) {
+  
+    for (var i = 0; i < _tam_museu; i++) {
+        if (global.conquistas[i].nome == "Tom da Floresta" && !global.conquistas[i].desbloqueado) {
+            global.conquistas[i].desbloqueado = true; 
+            array_push(lista_conquistas, "Item Secreto Revelado: Tom da Floresta!"); 
+            break;
         }
     }
+}
     if (global.boobs_mortos >= 1) {
         for (var i = 0; i < _tam_museu; i++) {
             if (global.conquistas[i].nome == "Bandana" && !global.conquistas[i].desbloqueado) {

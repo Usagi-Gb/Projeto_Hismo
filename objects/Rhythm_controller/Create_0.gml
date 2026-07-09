@@ -4,7 +4,7 @@ sec_per_beat = 60 / bpm; // Duração de uma batida em segundos
 //Fecha a trilha que estiver tocando para evitar duplicidade.
 audio_stop_all();
 
-music_instance = audio_play_sound(HismoStagio1, 1, true); //
+music_instance = audio_play_sound(HismoLutale, 1, true); //
 tolerance = 0.2; // 20% de tolerância para acertar
 can_hit = true;  // Flag para evitar que o jogador spame o botão
 

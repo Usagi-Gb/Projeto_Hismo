@@ -51,7 +51,7 @@ if (_confirma) {
     
     switch (_escolha) {
         case "CONTINUAR":
-            room_goto(room_boss); 
+            room_goto(roomjogo); 
             break;
             
         case "NOVO JOGO":
