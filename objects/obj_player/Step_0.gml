@@ -101,7 +101,16 @@ if ((vida <= 0 || vitoria) && !game_over) {
             }
         }
     }
-
+	
+	if (global.ratos_mortos >= 1) {
+        for (var i = 0; i < _tam_museu; i++) {
+            if (global.conquistas[i].nome == "Bomba Bombastic" && !global.conquistas[i].desbloqueado) {
+                global.conquistas[i].desbloqueado = true;
+                array_push(lista_conquistas, "Item Secreto Revelado: Bomba Bombastic!"); 
+                break;
+            }
+        }
+    }
     var _tem_sol = false;
     var _tem_fa = false;
     var _tem_jornal = false;

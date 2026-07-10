@@ -174,7 +174,7 @@ leva_dano = function(_dano){
 
         if (vida_atual <= 0) {
             global.inimigos_mortos++; 
-            global.boobs_mortos++; 
+            global.ratos_mortos++; 
 
             var _chance = irandom(100);
             if (_chance <= 100) {
