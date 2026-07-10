@@ -144,6 +144,7 @@
     {"id":{"name":"spr_tiro","path":"sprites/spr_tiro/spr_tiro.yy",},},
     {"id":{"name":"spr_violao","path":"sprites/spr_violao/spr_violao.yy",},},
     {"id":{"name":"sprt_cajado_vermelho","path":"sprites/sprt_cajado_vermelho/sprt_cajado_vermelho.yy",},},
+    {"id":{"name":"tiro_esp","path":"sprites/tiro_esp/tiro_esp.yy",},},
     {"id":{"name":"Tom_da_Floresta","path":"sprites/Tom_da_Floresta/Tom_da_Floresta.yy",},},
     {"id":{"name":"ukulele","path":"sprites/ukulele/ukulele.yy",},},
     {"id":{"name":"viol_o","path":"sprites/viol_o/viol_o.yy",},},

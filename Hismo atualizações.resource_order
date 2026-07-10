@@ -103,6 +103,7 @@
     {"name":"spr_tiro","order":5,"path":"sprites/spr_tiro/spr_tiro.yy",},
     {"name":"spr_violao","order":5,"path":"sprites/spr_violao/spr_violao.yy",},
     {"name":"sprt_cajado_vermelho","order":1,"path":"sprites/sprt_cajado_vermelho/sprt_cajado_vermelho.yy",},
+    {"name":"tiro_esp","order":7,"path":"sprites/tiro_esp/tiro_esp.yy",},
     {"name":"Tom_da_Floresta","order":5,"path":"sprites/Tom_da_Floresta/Tom_da_Floresta.yy",},
     {"name":"ukulele","order":3,"path":"sprites/ukulele/ukulele.yy",},
     {"name":"viol_o","order":6,"path":"sprites/viol_o/viol_o.yy",},
