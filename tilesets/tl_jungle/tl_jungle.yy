@@ -3,9 +3,13 @@
   "%Name":"tl_jungle",
   "autoTileSets":[],
   "macroPageTiles":{
-    "SerialiseHeight":0,
-    "SerialiseWidth":0,
-    "TileSerialiseData":[],
+    "SerialiseHeight":116,
+    "SerialiseWidth":10,
+    "TileCompressedData":[
+      19,0,40,41,0,106,107,0,104,105,0,0,56,57,0,122,123,0,120,121,-12,0,19,11,12,13,0,213,214,0,181,182,0,
+      27,28,29,0,229,230,0,197,198,-1110,0,
+    ],
+    "TileDataFormat":1,
   },
   "name":"tl_jungle",
   "out_columns":16,

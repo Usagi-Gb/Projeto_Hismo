@@ -1,4 +1,4 @@
-timer_vida = 15; 
-dano = 5; 
+timer_vida = 30; 
+dano = 3; 
 speed = 10; 
-alarm[0] = 5;
+alarm[0] = 30;
