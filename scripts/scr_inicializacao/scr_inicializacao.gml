@@ -99,7 +99,7 @@ global.conquistas = [
         desc_bloqueado: "Recompensa por abrir a pagina sobre",
         desc_desbloqueado: "",
         spr_bloqueado: spr_cadeado,
-        spr_desbloqueado: museu_viol_o,
+        spr_desbloqueado: viol_o,
         desbloqueado: false
     },
     {
@@ -107,7 +107,7 @@ global.conquistas = [
         desc_bloqueado: "Recompensa por abrir a pagina sobre",
         desc_desbloqueado: "",
         spr_bloqueado: spr_cadeado,
-        spr_desbloqueado: ukulele,
+        spr_desbloqueado: museu_viol_o,
         desbloqueado: false
     },
     {
@@ -123,7 +123,7 @@ global.conquistas = [
         desc_bloqueado: "...",
         desc_desbloqueado: "",
         spr_bloqueado: spr_cadeado,
-        spr_desbloqueado: bow,
+        spr_desbloqueado: bow_museu,
         desbloqueado: true
     },
     {
@@ -151,7 +151,7 @@ function salvar_jogo() {
         sapos: global.sapos_mortos,
         ratos: global.ratos_mortos,
         ritmos: global.ritmos_acertados,
-		CFM: global.chefe_final_morto,
+        CFM: global.chefe_final_morto,
         conquistas_status: [] 
     };
 
@@ -161,30 +161,33 @@ function salvar_jogo() {
     }
 
     var _json_string = json_stringify(_dados_save);
-    var _pasta = file_text_open_write("save_hismo.json");
-    file_text_write_string(_pasta, _json_string);
-    file_text_close(_pasta);
+    var _ficheiro = file_text_open_write("save_hismo.json");
+    file_text_write_string(_ficheiro, _json_string);
+    file_text_close(_ficheiro);
 }
 
 function carregar_jogo() {
     if (file_exists("save_hismo.json")) {
-        var _pasta = file_text_open_read("save_hismo.json");
-        var _json_string = file_text_read_string(_pasta);
-        file_text_close(_pasta);
+        var _ficheiro = file_text_open_read("save_hismo.json");
+        var _json_string = file_text_read_string(_ficheiro);
+        file_text_close(_ficheiro);
 
         var _dados_save = json_parse(_json_string);
 
-        global.inimigos_mortos = _dados_save.inimigos;
-        global.boobs_mortos = _dados_save.boobs;
-        global.sapos_mortos = _dados_save.sapos;
-        global.ratos_mortos = _dados_save.ratos;
-        global.ritmos_acertados = _dados_save.ritmos;
-		global.chefe_final_morto = _dados_save.CFM;
+        // Verificações seguras para evitar erro de variável inexistente
+        if (_dados_save[$ "inimigos"] != undefined) global.inimigos_mortos = _dados_save.inimigos;
+        if (_dados_save[$ "boobs"] != undefined) global.boobs_mortos = _dados_save.boobs;
+        if (_dados_save[$ "sapos"] != undefined) global.sapos_mortos = _dados_save.sapos;
+        if (_dados_save[$ "ratos"] != undefined) global.ratos_mortos = _dados_save.ratos;
+        if (_dados_save[$ "ritmos"] != undefined) global.ritmos_acertados = _dados_save.ritmos;
+        if (_dados_save[$ "CFM"] != undefined) global.chefe_final_morto = _dados_save.CFM;
 
-        var _tam = array_length(global.conquistas);
-        for (var i = 0; i < _tam; i++) {
-            if (i < array_length(_dados_save.conquistas_status)) {
-                global.conquistas[i].desbloqueado = _dados_save.conquistas_status[i];
+        if (_dados_save[$ "conquistas_status"] != undefined) {
+            var _tam = array_length(global.conquistas);
+            for (var i = 0; i < _tam; i++) {
+                if (i < array_length(_dados_save.conquistas_status)) {
+                    global.conquistas[i].desbloqueado = _dados_save.conquistas_status[i];
+                }
             }
         }
     }
@@ -200,19 +203,19 @@ function deletar_save() {
     global.sapos_mortos = 0;
     global.ratos_mortos = 0;
     global.ritmos_acertados = 0;
-	global.chefe_final_morto = false;
+    global.chefe_final_morto = false;
     
     var _tam = array_length(global.conquistas);
     for (var i = 0; i < _tam; i++) {
         var _nome = global.conquistas[i].nome;
-        
-        if (_nome == "Laudo" || _nome == "Partitura" || _nome == "Oito Notas" || _nome == "Arco") {
+        if (_nome == "Laudo" || _nome == "Partitura" || _nome == "Oito Notas") {
             global.conquistas[i].desbloqueado = true;
         } else {
             global.conquistas[i].desbloqueado = false;
         }
     }
 }
+
 carregar_jogo();
 global.player_vida_atual = -1;
 global.player_arma_atual = noone;

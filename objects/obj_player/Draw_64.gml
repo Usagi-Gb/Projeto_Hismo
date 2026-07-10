@@ -1,4 +1,3 @@
-// Trava: se a HQ estiver a passar, não desenha os corações!
 if (instance_exists(obj_final_hq)) exit;
 
 if (!game_over) {
@@ -35,7 +34,6 @@ else {
     draw_set_halign(fa_center);
     draw_set_valign(fa_middle);
     
-    // Titulo Dinamico baseado na vitoria
     var _texto_titulo = vitoria ? "VITÓRIA!" : "GAME OVER";
     var _cor_titulo = vitoria ? c_yellow : c_red;
     
@@ -52,7 +50,7 @@ else {
     }
     
     draw_set_color(c_white);
-    draw_text(_largura / 2, _altura / 2 + 140, "Aperte ESPACO para voltar ao menu");
+    draw_text(_largura / 2, _altura /2 + (_tam * 30), "Aperte ESPACO para voltar ao menu");
     
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);

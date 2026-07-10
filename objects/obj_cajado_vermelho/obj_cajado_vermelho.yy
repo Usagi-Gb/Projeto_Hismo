@@ -38,8 +38,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprt_cajado_vermelho",
-    "path":"sprites/sprt_cajado_vermelho/sprt_cajado_vermelho.yy",
+    "name":"ukulele",
+    "path":"sprites/ukulele/ukulele.yy",
   },
   "spriteMaskId":null,
   "visible":true,

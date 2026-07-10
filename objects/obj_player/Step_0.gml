@@ -2,15 +2,14 @@
 if ((vida <= 0 || vitoria) && !game_over) {
     game_over = true;
     lista_conquistas = [];
-}
+    
     var _ondas = global.ondas_atuais;
     if (instance_exists(obj_controlador_waves)) {
         _ondas = obj_controlador_waves.current_wave;
     }
     ondas_alcancadas = _ondas;
     
-    // CORRIGIDO: Removido o "- 1" para mostrar a onda correta
-    array_push(lista_conquistas, "Ondas Alcançadas: " + string(_ondas));
+    array_push(lista_conquistas, "Ondas Alcancadas: " + string(_ondas));
     array_push(lista_conquistas, "Inimigos Mortos: " + string(global.inimigos_mortos));
     
     if (_ondas >= 5) array_push(lista_conquistas, "Trofeu: VETERANO DE GUERRA!");
@@ -18,41 +17,19 @@ if ((vida <= 0 || vitoria) && !game_over) {
     if (global.ritmos_acertados >= 15) array_push(lista_conquistas, "Trofeu: MESTRE DO RITMO!");
     
     var _tam_museu = array_length(global.conquistas);
-
+    
+    // Procura o Tom da Floresta no Museu e desbloqueia antes de salvar
+    if (global.chefe_final_morto) {
+        for (var i = 0; i < _tam_museu; i++) {
+            if (global.conquistas[i].nome == "Tom da Floresta" && !global.conquistas[i].desbloqueado) {
+                global.conquistas[i].desbloqueado = true;
+                array_push(lista_conquistas, "Item Secreto Revelado: TOM DA FLORESTA!"); 
+                break;
+            }
+        }
+    }
     
     if (global.boobs_mortos >= 10) {
-	
-if (room == room_boss) {
-  
-    for (var i = 0; i < _tam_museu; i++) {
-        if (global.conquistas[i].nome == "Tom da Floresta" && !global.conquistas[i].desbloqueado) {
-            global.conquistas[i].desbloqueado = true; 
-            array_push(lista_conquistas, "Item Secreto Revelado: Tom da Floresta!"); 
-            break;
-        }
-    }
-}
-if (room == roomsobre) {
-  
-    for (var i = 0; i < _tam_museu; i++) {
-        if (global.conquistas[i].nome == "Violao" && !global.conquistas[i].desbloqueado) {
-            global.conquistas[i].desbloqueado = true; 
-            array_push(lista_conquistas, "Item Secreto Revelado: Violao!"); 
-            break;
-        }
-    }
-}
-if (room == roomsobre) {
-  
-    for (var i = 0; i < _tam_museu; i++) {
-        if (global.conquistas[i].nome == "Ukulele" && !global.conquistas[i].desbloqueado) {
-            global.conquistas[i].desbloqueado = true; 
-            array_push(lista_conquistas, "Item Secreto Revelado: Ukulele!"); 
-            break;
-        }
-    }
-}
-    if (global.boobs_mortos >= 1) {
         for (var i = 0; i < _tam_museu; i++) {
             if (global.conquistas[i].nome == "Bandana" && !global.conquistas[i].desbloqueado) {
                 global.conquistas[i].desbloqueado = true;
@@ -76,7 +53,7 @@ if (room == roomsobre) {
          array_push(lista_conquistas, "Dica: Tente sobreviver mais tempo!");
     }
 
-    // Salva o progresso
+    // Salva o progresso no computador
     salvar_jogo();
 
     var _width = surface_get_width(application_surface);
@@ -156,3 +133,31 @@ depth = -bbox_bottom;
 joga_arma();
 efeito_dano();
 olha_mouse();
+
+if (arma != noone) {
+    // Se a arma atual for diferente da arma que guardamos na memória:
+    if (arma.object_index != arma_atual_id) {
+        arma_atual_id = arma.object_index;
+        
+        var _nome_conquista = "";
+        
+        if (arma_atual_id == obj_cajado_axe) _nome_conquista = "Violão do Museu";
+        else if (arma_atual_id == obj_cajado_verde) _nome_conquista = "Arco";
+        else if (arma_atual_id == obj_cajado_vermelho) _nome_conquista = "Ukulele";
+        
+        if (_nome_conquista != "") {
+            var _tam = array_length(global.conquistas);
+            for (var i = 0; i < _tam; i++) {
+                if (global.conquistas[i].nome == _nome_conquista && !global.conquistas[i].desbloqueado) {
+                    global.conquistas[i].desbloqueado = true;
+                    // Salva no exato instante em que pega a arma pela primeira vez!
+                    salvar_jogo(); 
+                    break;
+                }
+            }
+        }
+    }
+} else {
+    // Se ele jogar a arma no chão, reseta a memória
+    arma_atual_id = noone;
+}

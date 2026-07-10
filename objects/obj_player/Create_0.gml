@@ -8,7 +8,7 @@ gameover_surf = -1;
 ondas_alcancadas = 0;
 
 vitoria = false;
-
+arma_atual_id = noone;
 arma = noone;
 
 dano = false;

@@ -39,8 +39,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"ukulele",
-    "path":"sprites/ukulele/ukulele.yy",
+    "name":"spr_violao",
+    "path":"sprites/spr_violao/spr_violao.yy",
   },
   "spriteMaskId":null,
   "visible":true,
