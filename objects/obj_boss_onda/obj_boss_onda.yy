@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_tiro",
-    "path":"sprites/spr_tiro/spr_tiro.yy",
+    "name":"spr_macaco_bate",
+    "path":"sprites/spr_macaco_bate/spr_macaco_bate.yy",
   },
   "spriteMaskId":null,
   "visible":true,

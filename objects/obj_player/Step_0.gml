@@ -1,4 +1,3 @@
-// Lógica de Game Over e Vitória (Salva e mostra conquistas)
 if ((vida <= 0 || vitoria) && !game_over) {
     game_over = true;
     lista_conquistas = [];
@@ -12,13 +11,17 @@ if ((vida <= 0 || vitoria) && !game_over) {
     array_push(lista_conquistas, "Ondas Alcancadas: " + string(_ondas));
     array_push(lista_conquistas, "Inimigos Mortos: " + string(global.inimigos_mortos));
     
+    var _tam_c = array_length(conquistas_run);
+    for (var i = 0; i < _tam_c; i++) {
+        array_push(lista_conquistas, conquistas_run[i]);
+    }
+    
     if (_ondas >= 5) array_push(lista_conquistas, "Trofeu: VETERANO DE GUERRA!");
     if (global.inimigos_mortos >= 20) array_push(lista_conquistas, "Trofeu: EXTERMINADOR DE MONSTROS!");
     if (global.ritmos_acertados >= 15) array_push(lista_conquistas, "Trofeu: MESTRE DO RITMO!");
     
     var _tam_museu = array_length(global.conquistas);
     
-    // Procura o Tom da Floresta no Museu e desbloqueia antes de salvar
     if (global.chefe_final_morto) {
         for (var i = 0; i < _tam_museu; i++) {
             if (global.conquistas[i].nome == "Tom da Floresta" && !global.conquistas[i].desbloqueado) {
@@ -49,11 +52,92 @@ if ((vida <= 0 || vitoria) && !game_over) {
         }
     }
 
+    if (global.sapos_mortos >= 10) {
+        for (var i = 0; i < _tam_museu; i++) {
+            if (global.conquistas[i].nome == "Crescente" && !global.conquistas[i].desbloqueado) {
+                global.conquistas[i].desbloqueado = true;
+                array_push(lista_conquistas, "Item Secreto Revelado: CRESCENTE!"); 
+                break;
+            }
+        }
+    }
+    
+    if (global.inimigos_mortos >= 1) {
+        for (var i = 0; i < _tam_museu; i++) {
+            if (global.conquistas[i].nome == "Clave de Sol" && !global.conquistas[i].desbloqueado) {
+                global.conquistas[i].desbloqueado = true;
+                array_push(lista_conquistas, "Item Secreto Revelado: CLAVE DE SOL!"); 
+                break;
+            }
+        }
+    }
+    
+    if (_ondas >= 3) {
+        for (var i = 0; i < _tam_museu; i++) {
+            if (global.conquistas[i].nome == "Clave de Fa" && !global.conquistas[i].desbloqueado) {
+                global.conquistas[i].desbloqueado = true;
+                array_push(lista_conquistas, "Item Secreto Revelado: CLAVE DE FA!"); 
+                break;
+            }
+        }
+    }
+    
+    if (global.boobs_mortos >= 20) {
+        for (var i = 0; i < _tam_museu; i++) {
+            if (global.conquistas[i].nome == "Jornal Marley" && !global.conquistas[i].desbloqueado) {
+                global.conquistas[i].desbloqueado = true;
+                array_push(lista_conquistas, "Item Secreto Revelado: JORNAL MARLEY!"); 
+                break;
+            }
+        }
+    }
+
+    if (global.inimigos_mortos >= 10) {
+        for (var i = 0; i < _tam_museu; i++) {
+            if (global.conquistas[i].nome == "Cupcake" && !global.conquistas[i].desbloqueado) {
+                global.conquistas[i].desbloqueado = true;
+                array_push(lista_conquistas, "Item Secreto Revelado: CUPCAKE!"); 
+                break;
+            }
+        }
+    }
+
+    var _tem_sol = false;
+    var _tem_fa = false;
+    var _tem_jornal = false;
+    var _tem_cupcake = false;
+    
+    for (var i = 0; i < _tam_museu; i++) {
+        if (global.conquistas[i].nome == "Clave de Sol" && global.conquistas[i].desbloqueado) _tem_sol = true;
+        if (global.conquistas[i].nome == "Clave de Fa" && global.conquistas[i].desbloqueado) _tem_fa = true;
+        if (global.conquistas[i].nome == "Jornal Marley" && global.conquistas[i].desbloqueado) _tem_jornal = true;
+        if (global.conquistas[i].nome == "Cupcake" && global.conquistas[i].desbloqueado) _tem_cupcake = true;
+    }
+    
+    if (_tem_sol && _tem_fa) {
+        for (var i = 0; i < _tam_museu; i++) {
+            if (global.conquistas[i].nome == "Jingle" && !global.conquistas[i].desbloqueado) {
+                global.conquistas[i].desbloqueado = true;
+                array_push(lista_conquistas, "Item Secreto Revelado: JINGLE!"); 
+                break;
+            }
+        }
+    }
+
+    if (_tem_jornal && _tem_cupcake) {
+        for (var i = 0; i < _tam_museu; i++) {
+            if (global.conquistas[i].nome == "Acidentes" && !global.conquistas[i].desbloqueado) {
+                global.conquistas[i].desbloqueado = true;
+                array_push(lista_conquistas, "Item Secreto Revelado: ACIDENTES!"); 
+                break;
+            }
+        }
+    }
+
     if (array_length(lista_conquistas) <= 2) {
          array_push(lista_conquistas, "Dica: Tente sobreviver mais tempo!");
     }
 
-    // Salva o progresso no computador
     salvar_jogo();
 
     var _width = surface_get_width(application_surface);
@@ -135,13 +219,12 @@ efeito_dano();
 olha_mouse();
 
 if (arma != noone) {
-    // Se a arma atual for diferente da arma que guardamos na memória:
     if (arma.object_index != arma_atual_id) {
         arma_atual_id = arma.object_index;
         
         var _nome_conquista = "";
         
-        if (arma_atual_id == obj_cajado_axe) _nome_conquista = "Violão do Museu";
+        if (arma_atual_id == obj_cajado_axe) _nome_conquista = "Violao";
         else if (arma_atual_id == obj_cajado_verde) _nome_conquista = "Arco";
         else if (arma_atual_id == obj_cajado_vermelho) _nome_conquista = "Ukulele";
         
@@ -150,7 +233,7 @@ if (arma != noone) {
             for (var i = 0; i < _tam; i++) {
                 if (global.conquistas[i].nome == _nome_conquista && !global.conquistas[i].desbloqueado) {
                     global.conquistas[i].desbloqueado = true;
-                    // Salva no exato instante em que pega a arma pela primeira vez!
+                    array_push(conquistas_run, "Arma Desbloqueada: " + string_upper(_nome_conquista) + "!");
                     salvar_jogo(); 
                     break;
                 }
@@ -158,6 +241,5 @@ if (arma != noone) {
         }
     }
 } else {
-    // Se ele jogar a arma no chão, reseta a memória
     arma_atual_id = noone;
 }

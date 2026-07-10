@@ -129,6 +129,7 @@
     {"id":{"name":"spr_lizard_run","path":"sprites/spr_lizard_run/spr_lizard_run.yy",},},
     {"id":{"name":"spr_lucas_idle","path":"sprites/spr_lucas_idle/spr_lucas_idle.yy",},},
     {"id":{"name":"spr_lucas_run","path":"sprites/spr_lucas_run/spr_lucas_run.yy",},},
+    {"id":{"name":"spr_macaco_bate","path":"sprites/spr_macaco_bate/spr_macaco_bate.yy",},},
     {"id":{"name":"spr_player_idle","path":"sprites/spr_player_idle/spr_player_idle.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
     {"id":{"name":"spr_ratao_run","path":"sprites/spr_ratao_run/spr_ratao_run.yy",},},

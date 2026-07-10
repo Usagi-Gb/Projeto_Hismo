@@ -48,7 +48,7 @@ global.conquistas = [
     },
     {
         nome: "Clave de Fa",
-        desc_bloqueado: "Recompensa de primeira wave",
+        desc_bloqueado: "Recompensa da segunda wave",
         desc_desbloqueado: "...já nesta clave terá um sol no espaço sobre a quarta linha.",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: Clave_Fa,
@@ -64,7 +64,7 @@ global.conquistas = [
     },
     {
         nome: "Jornal Marley",
-        desc_bloqueado: "Derrote 3 Boob Marley",
+        desc_bloqueado: "Derrote 20 Boob Marley",
         desc_desbloqueado: "... Durante sua 4° turne pelo Brasil, o artista audiovisual Boob Marley teve seu historico primeiro \nproblema tecnico durante o show na Bahia quando um de seus fas conseguiu entrar no camarin de Boob Marley durante o show.\n Boob Marley, em sua metodologia peculiar, decidiu resolver o problema pessoalmente e teve que interromper seu proprio show.",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: JornalCidadeMARLEY,
@@ -96,7 +96,7 @@ global.conquistas = [
     },
     {
         nome: "Violao",
-        desc_bloqueado: "Recompensa por abrir a pagina sobre",
+        desc_bloqueado: "Recompensa por pegar o violao",
         desc_desbloqueado: "",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: viol_o,
@@ -104,7 +104,7 @@ global.conquistas = [
     },
     {
         nome: "Ukulele",
-        desc_bloqueado: "Recompensa por abrir a pagina sobre",
+        desc_bloqueado: "Recompensa por pegar o ukulele",
         desc_desbloqueado: "",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: museu_viol_o,
@@ -120,7 +120,7 @@ global.conquistas = [
     },
     {
         nome: "Arco",
-        desc_bloqueado: "...",
+        desc_bloqueado: "Recompensa por pegar o arco",
         desc_desbloqueado: "",
         spr_bloqueado: spr_cadeado,
         spr_desbloqueado: bow_museu,

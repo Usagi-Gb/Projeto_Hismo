@@ -9,6 +9,8 @@ ondas_alcancadas = 0;
 
 vitoria = false;
 arma_atual_id = noone;
+conquistas_run = [];
+
 arma = noone;
 
 dano = false;
