@@ -1,12 +1,6 @@
-image_xscale = 0.2;
-image_yscale = 0.2;
-image_alpha = 1;
-speed = 5;
+// Define quanto tempo o grito dura (ex: 180 = 3 segundos a 60fps)
+life_timer = 180; 
 
-if (instance_exists(obj_player)) {
-    direction = point_direction(x, y, obj_player.x, obj_player.y);
-} else {
-    direction = 270;
-}
-
-image_angle = direction;
+// Velocidade e direção inicial (o Boss irá sobrescrever isso ao criar)
+speed = 0;
+direction = 0;

@@ -1,8 +1,6 @@
-image_xscale += 0.04;
-image_yscale += 0.06;
-
-image_alpha -= 0.015;
-
-if (image_alpha <= 0) {
+// Conta o tempo e destrói quando chegar a zero
+if (life_timer > 0) {
+    life_timer--;
+} else {
     instance_destroy();
 }
